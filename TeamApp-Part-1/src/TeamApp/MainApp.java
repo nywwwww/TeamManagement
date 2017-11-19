@@ -34,7 +34,8 @@ public class MainApp extends Application {
             Font.loadFont(getClass().getResourceAsStream("/res/NanumBarunGothic.ttf"),14 );
             
             // XML로드 및 실제 뷰
-            replaceSceneContent("/xml/PersonOverView.fxml");
+            replaceSceneContent("/xml/SignIn.fxml");
+            //replaceSceneContent("/xml/Registration.fxml");
             primaryStage.show();
             
         } catch (Exception ex) {
@@ -49,7 +50,7 @@ public class MainApp extends Application {
         if (scene == null) {
             scene = new Scene(page);
             // CSS로드
-            scene.getStylesheets().add(MainApp.class.getResource("/res/login.css").toExternalForm());
+            scene.getStylesheets().add(MainApp.class.getResource("/res/BlackStyle.css").toExternalForm());
             // Resize 방지
             stage.setResizable(false);
             // 기본 종료/최소화/최대화 버튼 제거
