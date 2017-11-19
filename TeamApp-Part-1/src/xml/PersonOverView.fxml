@@ -7,14 +7,18 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="650.0" prefWidth="370.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button layoutX="94.0" layoutY="515.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="193.0" text="회원 가입" />
             <Button layoutX="94.0" layoutY="479.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="193.0" text="로그인" />
-            <CheckBox layoutX="133.0" layoutY="423.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="128.0" text="계정을 저장합니다" textFill="#f9f9f9" />
+            <CheckBox layoutX="133.0" layoutY="423.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="128.0" text="계정을 저장합니다" textFill="#f9f9f9">
+               <font>
+                  <Font name="NanumSquare Light" size="12.0" />
+               </font></CheckBox>
             <CheckBox layoutX="133.0" layoutY="450.0" mnemonicParsing="false" text="자동 로그인" textFill="#f7f7f7" />
             <TextField layoutX="66.0" layoutY="374.0" prefHeight="35.0" prefWidth="240.0" />
             <TextField layoutX="66.0" layoutY="340.0" minHeight="35.0" prefWidth="240.0" />
