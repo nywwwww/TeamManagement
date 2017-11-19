@@ -2,43 +2,63 @@ package TeamApp;
 
 import java.io.IOException;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.JavaFXBuilderFactory;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class MainApp extends Application {
-
-	private Stage primaryStage;
+    
+	private Stage stage;
 	
 	public static void main(String[] args) {
 		launch(args);
 	}
 	
 	@Override
-	public void start(Stage primaryStage) {
-		this.primaryStage = primaryStage;
-		this.primaryStage.setTitle("TeamManager");
-		
-		showPersonOverview();
-	}
-	
-	public void showPersonOverview() {
+	public void start(Stage primaryStage) throws Exception {
 		try {
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("PersonOverView.fxml"));
-			AnchorPane personOverview = (AnchorPane) loader.load();
-			
-			Scene scene = new Scene(personOverview);
-			scene.getStylesheets().add(MainApp.class.getResource("Login.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+            stage = primaryStage;
+            
+            // 폰트 로드
+            Font.loadFont(getClass().getResourceAsStream("/res/NanumSquareB.ttf"),14 );
+            Font.loadFont(getClass().getResourceAsStream("/res/NanumSquareEB.ttf"),14 );
+            Font.loadFont(getClass().getResourceAsStream("/res/NanumSquareL.ttf"),14 );
+            Font.loadFont(getClass().getResourceAsStream("/res/NanumSquareR.ttf"),14 );
+            Font.loadFont(getClass().getResourceAsStream("/res/NanumBarunGothic.ttf"),14 );
+            
+            // XML로드 및 실제 뷰
+            replaceSceneContent("/xml/PersonOverView.fxml");
+            primaryStage.show();
+            
+        } catch (Exception ex) {
+            Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
+        }
 	}
+
 	
+	private Parent replaceSceneContent(String fxml) throws Exception {
+        Parent page = (Parent) FXMLLoader.load(MainApp.class.getResource(fxml), null, new JavaFXBuilderFactory());
+        Scene scene = stage.getScene();
+        if (scene == null) {
+            scene = new Scene(page);
+            // CSS로드
+            scene.getStylesheets().add(MainApp.class.getResource("/res/login.css").toExternalForm());
+            // Resize 방지
+            stage.setResizable(false);
+            // 기본 종료/최소화/최대화 버튼 제거
+            //stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(scene);
+        } else {
+        	stage.getScene().setRoot(page);
+        }
+        stage.sizeToScene();
+        return page;
+    }
 }
