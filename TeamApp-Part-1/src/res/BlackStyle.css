@@ -1,0 +1,71 @@
+
+/*전체공통-------------------------------------------- */
+.button{
+	-fx-background-color: transparent;
+}
+
+
+
+/*  Sign In (로그인) 페이지-------------------------------------------- */
+
+.SignIn {
+	-fx-font-family: "NanumBarunGothic";
+    -fx-background-image: url("SI_bg.png");
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.SignIn .button{
+	-fx-background-image: url("SI_BT.png");
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+.SignIn .button:pressed{
+	/*-fx-background-image: url(".png"); */
+	
+}
+.SignIn .button:disabled{
+}
+
+.SignIn .text-field{
+	-fx-background-image: url("SI_TFDisabled.png");
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 14;
+	-fx-highlight-fill: #f9f9f9;
+	-fx-alignment: center_left;
+}
+.SignIn .text-field:focused{
+	-fx-background-image: url("SI_TFEnabled.png");
+}
+
+
+
+
+
+/*Reistration (회원가입) 페이지-------------------------------------------- */
+
+.Registration {
+	-fx-font-family: "NanumBarunGothic";
+    -fx-background-image: url("SI_bg.png");
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.Registration .text-field{
+	-fx-background-image: url("Reg_TFDisabled.png");
+	-fx-font-size: 14;
+	-fx-highlight-fill: #f9f9f9;
+}
+.Registration .text-field:focused{
+	-fx-background-image: url("Reg_TFEnabled.png");
+}
+
+.Registration .button{
+	-fx-background-image: url("Reg_BTEnabled.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+#Reg_backbutton{
+	-fx-background-image: url("Reg_BTDisabled.png");	
+}
+
