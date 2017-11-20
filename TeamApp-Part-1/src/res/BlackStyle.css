@@ -1,12 +1,12 @@
 
-/*ÀüÃ¼°øÅë-------------------------------------------- */
+/*ì „ì²´ê³µí†µ-------------------------------------------- */
 .button{
 	-fx-background-color: transparent;
 }
 
 
 
-/*  Sign In (·Î±×ÀÎ) ÆäÀÌÁö-------------------------------------------- */
+/*  Sign In (ë¡œê·¸ì¸) í˜ì´ì§€-------------------------------------------- */
 
 .SignIn {
 	-fx-font-family: "NanumBarunGothic";
@@ -32,7 +32,7 @@
 	-fx-text-fill: #f9f9f9;
 	-fx-font-size: 14;
 	-fx-highlight-fill: #f9f9f9;
-	-fx-alignment: center;
+	-fx-alignment: center_left;
 }
 .SignIn .text-field:focused{
 	-fx-background-image: url("SI_TFEnabled.png");
@@ -42,7 +42,7 @@
 
 
 
-/*Reistration (È¸¿ø°¡ÀÔ) ÆäÀÌÁö-------------------------------------------- */
+/*Reistration (íšŒì›ê°€ì…) í˜ì´ì§€-------------------------------------------- */
 
 .Registration {
 	-fx-font-family: "NanumBarunGothic";
