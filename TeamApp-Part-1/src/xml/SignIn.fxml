@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="650.0" prefWidth="370.0" styleClass="SignIn" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
    <children>
-      <Pane layoutX="-2.0" layoutY="-2.0" pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" stylesheets="@../res/BlackStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="-2.0" layoutY="-2.0" pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button fx:id="RegActiontarget" layoutX="94.0" layoutY="515.0" mnemonicParsing="false" onAction="#hRegButtonAction" prefHeight="28.0" prefWidth="193.0" text="회원 가입" />
             <Button layoutX="94.0" layoutY="479.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="28.0" prefWidth="193.0" text="로그인">
