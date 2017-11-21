@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
    <children>
-      <Pane layoutY="14.0" pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" styleClass="Registration" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+      <Pane pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" styleClass="Registration" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button id="Reg_backbutton" layoutX="16.0" layoutY="545.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="342.0" text="돌아가기" />
+            <Button id="Reg_backbutton" fx:id="BackActiontarget" layoutX="16.0" layoutY="545.0" mnemonicParsing="false" onAction="#hBackButtonAction" prefHeight="35.0" prefWidth="342.0" text="돌아가기" />
             <Button layoutX="16.0" layoutY="504.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="35.0" prefWidth="342.0" text="회원가입">
                <rotationAxis>
                   <Point3D />

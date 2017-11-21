@@ -50,7 +50,7 @@ public class MainApp extends Application {
         if (scene == null) {
             scene = new Scene(page);
             // CSS로드
-            scene.getStylesheets().add(MainApp.class.getResource("/res/BlackStyle.css").toExternalForm());
+            //scene.getStylesheets().add(MainApp.class.getResource("/res/BlackStyle.css").toExternalForm());
             // Resize 방지
             stage.setResizable(false);
             // 기본 종료/최소화/최대화 버튼 제거
