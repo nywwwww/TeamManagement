@@ -1,12 +1,12 @@
 
-/*ì „ì²´ê³µí†µ-------------------------------------------- */
+/* ÀüÃ¼°øÅë-------------------------------------------- */
 .button{
 	-fx-background-color: transparent;
 }
 
 
 
-/*  Sign In (ë¡œê·¸ì¸) í˜ì´ì§€-------------------------------------------- */
+/* Sign In (·Î±×ÀÎ) ÆäÀÌÁö-------------------------------------------- */
 
 .SignIn {
 	-fx-font-family: "NanumBarunGothic";
@@ -20,6 +20,7 @@
 	-fx-text-fill: #f9f9f9;
 	-fx-underline: false;
 }
+
 .SignIn .button:pressed{
 	/*-fx-background-image: url(".png"); */
 	
@@ -41,8 +42,7 @@
 
 
 
-
-/*Reistration (íšŒì›ê°€ì…) í˜ì´ì§€-------------------------------------------- */
+/* Reistration (È¸¿ø°¡ÀÔ) ÆäÀÌÁö-------------------------------------------- */
 
 .Registration {
 	-fx-font-family: "NanumBarunGothic";

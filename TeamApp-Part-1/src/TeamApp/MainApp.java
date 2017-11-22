@@ -17,9 +17,6 @@ public class MainApp extends Application {
     
 	private Stage stage;
 	
-	@FXML private Button RegActiontarget;
-	@FXML private Button BackActiontarget;
-	
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -66,39 +63,4 @@ public class MainApp extends Application {
         return page;
     }
 	
-	/*
-	private Parent replaceSceneContent(String fxml) throws Exception {
-        Parent page = (Parent) FXMLLoader.load(MainApp.class.getResource(fxml), null, new JavaFXBuilderFactory());
-        Scene scene = stage.getScene();
-        scene = new Scene(page);
-        // CSS로드
-        scene.getStylesheets().add(MainApp.class.getResource("/res/BlackStyle.css").toExternalForm());
-        // Resize 방지
-        stage.setResizable(false);
-        // 기본 종료/최소화/최대화 버튼 제거
-        //stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(scene);
-    
-        stage.sizeToScene();
-        return page;
-    }
-	
-	@FXML void hRegButtonAction(ActionEvent event) {
-		try {
-			replaceSceneContent("/xml/Registration.fxml");
-			stage.show();
-		} catch (Exception ex) {
-			Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
-		}
-	}
-	
-	@FXML void hBackButtonAction(ActionEvent event) {
-		try {
-			replaceSceneContent("/xml/SignIn.fxml");
-			stage.show();
-		} catch (Exception ex) {
-			Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
-		}
-	}
-	*/
 }
