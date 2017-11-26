@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -23,28 +24,8 @@ public class MainAppController {
 	@FXML private Label ChangePWDActiontarget;
 	@FXML private AnchorPane rootPane;	
 	
-	/*
-	@FXML protected void hRegButtonAction(ActionEvent event) {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/xml/Registration.fxml"));
-			Parent page = loader.load();
-			((Stage)RegActiontarget.getScene().getWindow()).setScene(new Scene(page));
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
-	}
+// 로그인 / 회원가입 페이지 --------------------------------------------------------------------------------
 	
-	@FXML protected void hBackButtonAction(ActionEvent event) {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/xml/SignIn.fxml"));
-			Parent page = loader.load();
-			((Stage)BackActiontarget.getScene().getWindow()).setScene(new Scene(page));
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
-	}
-	
-	*/
 	// 회원가입 버튼(로그인 화면)
 	@FXML protected void  hRegButtonAction(ActionEvent event) {
 		try {
@@ -75,19 +56,39 @@ public class MainAppController {
 		}
 	}
 	
-	@FXML
-	protected void  hSIButtonAction(ActionEvent event) {
+	// 로그인(임시)
+	@FXML protected void  hSIButtonAction(ActionEvent event) {
 		try {
-			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/ChangePWD.fxml"));
-			rootPane.getChildren().setAll(pane);
+			// 로그인할때는 Pane의 형태가 달라지므로, 기존 전환 코드 사용.
+			Parent page = FXMLLoader.load(getClass().getResource("/xml/index.fxml"));
+			Scene scene = new Scene(page);
+			scene.getStylesheets().add(MainApp.class.getResource("/res/BlackStyle.css").toExternalForm());
+			Stage appStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            appStage.setScene(scene);
+            appStage.show();
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
 	}
 	
-	@FXML Pane secPane;
-	public void loadFxml (ActionEvent event) throws IOException  {
-
+// 메인 페이지 --------------------------------------------------------------------------------
+	// 사이드 메뉴 --------------------------------------------------------------------------------
+	@FXML private AnchorPane viewPane;
+	public void hMenuTeamButtonAction(MouseEvent event) throws IOException  {
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Team.fxml"));
+		viewPane.getChildren().setAll(pane);
+	}
+	public void hMenuComButtonAction(MouseEvent event) throws IOException  {
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Com.fxml"));
+		viewPane.getChildren().setAll(pane);
+	}
+	public void hMenuTodoButtonAction(MouseEvent event) throws IOException  {
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Todo.fxml"));
+		viewPane.getChildren().setAll(pane);
+	}
+	public void hMenuSetButtonAction(MouseEvent event) throws IOException  {
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
+		viewPane.getChildren().setAll(pane);
 	}
 }
 

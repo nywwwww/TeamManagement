@@ -6,8 +6,14 @@
 .button:hover{
 	-fx-opacity : 0.8;
 }
-
-
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: transparent;
+   -fx-padding: 0 0 0 0;
+}
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: transparent;
+   -fx-padding: 0 0 0 0;
+}
 
 /* Sign In (로그인) 페이지-------------------------------------------- */
 
@@ -52,6 +58,10 @@
     -fx-faint-focus-color: transparent;
 }
 
+.Registration .Label{
+	-fx-font-family: "NanumSquareL";
+}
+
 .Registration .text-field{
 	-fx-background-image: url("Reg_TFDisabled.png");
 	-fx-font-size: 14;
@@ -71,6 +81,20 @@
 	-fx-background-image: url("Reg_BTDisabled.png");	
 }
 
+
+/* mainTemplate 메인 - 전체 템플릿 -------------------------------------------- */
+
+.sidebar{
+	-fx-background-image: url("ind_sidebarBG.png");
+}
+.topbar{
+	-fx-background-image: url("ind_topbarBG.png");
+}
+
+/* 사이드메뉴 통합 CSS */
+.sideMenu:hover{
+	-fx-opacity : 0.6;
+}
 
 
 
