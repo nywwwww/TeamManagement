@@ -32,7 +32,7 @@
 	-fx-text-fill: #f9f9f9;
 	-fx-font-size: 14;
 	-fx-highlight-fill: #f9f9f9;
-	-fx-alignment: center;
+	-fx-alignment: center_left;
 }
 .SignIn .text-field:focused{
 	-fx-background-image: url("SI_TFEnabled.png");
