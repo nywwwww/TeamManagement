@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
    <children>
       <Pane pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" styleClass="Registration" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>

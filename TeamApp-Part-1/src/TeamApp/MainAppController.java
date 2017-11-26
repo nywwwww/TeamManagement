@@ -11,6 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
@@ -19,6 +21,7 @@ public class MainAppController {
 	@FXML private Button RegActiontarget;
 	@FXML private Button BackActiontarget;
 	@FXML private Label ChangePWDActiontarget;
+	@FXML private AnchorPane rootPane;	
 	
 	/*
 	@FXML protected void hRegButtonAction(ActionEvent event) {
@@ -45,39 +48,47 @@ public class MainAppController {
 	// 회원가입 버튼(로그인 화면)
 	@FXML protected void  hRegButtonAction(ActionEvent event) {
 		try {
-			Parent page = FXMLLoader.load(getClass().getResource("/xml/Registration.fxml"));
-			Scene scene = new Scene(page);
-			scene.getStylesheets().add(MainApp.class.getResource("/res/BlackStyle.css").toExternalForm());
-			Stage appStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            appStage.setScene(scene);
-            appStage.show();
+			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Registration.fxml"));
+			rootPane.getChildren().setAll(pane);
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
 	}
 	
 	// 돌아가기 버튼(회원가입 화면)
-	@FXML protected void hBackButtonAction(ActionEvent event) {
+	@FXML 
+	protected void hBackButtonAction(ActionEvent event) {
 		try {
-			Parent page = FXMLLoader.load(getClass().getResource("/xml/SignIn.fxml"));
-			Scene scene = new Scene(page);
-			scene.getStylesheets().add(MainApp.class.getResource("/res/BlackStyle.css").toExternalForm());
-			Stage appStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            appStage.setScene(scene);
-            appStage.show();
+			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/SignIn.fxml"));
+			rootPane.getChildren().setAll(pane);
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+	// 비밀번호변경 버튼(로그인 화면)
+	@FXML protected void hChangePWDButtonAction(MouseEvent event) {
+		try {
+			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/ChangePWD.fxml"));
+			rootPane.getChildren().setAll(pane);
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
 	}
 	
-	// 비밀번호변경 버튼(로그인 화면)
-	@FXML protected void hChangePWDButtonAction(MouseEvent event) {
+	@FXML
+	protected void  hSIButtonAction(ActionEvent event) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/xml/ChangePWD.fxml"));
-			Parent page = loader.load();
-			((Stage)RegActiontarget.getScene().getWindow()).setScene(new Scene(page));
+			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/ChangePWD.fxml"));
+			rootPane.getChildren().setAll(pane);
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
 	}
+	
+	@FXML Pane secPane;
+	public void loadFxml (ActionEvent event) throws IOException  {
+
+	}
 }
+
+

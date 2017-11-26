@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
    <children>
       <Pane pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" styleClass="Registration" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,13 +21,13 @@
             <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="100.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView disable="true" fitHeight="407.0" fitWidth="342.0" layoutX="17.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../res/Reg_sheetbg.png" />
+                  <Image url="@../res/CPWD_sheetbg.png" />
                </image>
             </ImageView>
-            <TextField layoutX="66.0" layoutY="110.0" prefHeight="35.0" prefWidth="240.0" promptText="사용자 이름" />
-            <TextField layoutX="66.0" layoutY="160.0" prefHeight="35.0" prefWidth="240.0" promptText="당신의 출신 초등학교는 어디입니까?" />
-            <PasswordField layoutX="66.0" layoutY="260.0" prefHeight="35.0" prefWidth="240.0" promptText="암호 재입력" />
-            <PasswordField layoutX="66.0" layoutY="210.0" prefHeight="35.0" prefWidth="240.0" promptText="암호" />
+            <TextField layoutX="66.0" layoutY="90.0" prefHeight="35.0" prefWidth="240.0" promptText="사용자 이름" />
+            <TextField layoutX="66.0" layoutY="130.0" prefHeight="35.0" prefWidth="240.0" promptText="당신의 출신 초등학교는 어디입니까?" />
+            <PasswordField layoutX="66.0" layoutY="210.0" prefHeight="35.0" prefWidth="240.0" promptText="암호 재입력" />
+            <PasswordField layoutX="66.0" layoutY="170.0" prefHeight="35.0" prefWidth="240.0" promptText="암호" />
          </children>
       </Pane>
    </children>

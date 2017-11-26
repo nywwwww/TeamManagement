@@ -3,6 +3,9 @@
 .button{
 	-fx-background-color: transparent;
 }
+.button:hover{
+	-fx-opacity : 0.8;
+}
 
 
 
@@ -24,8 +27,6 @@
 .SignIn .button:pressed{
 	/*-fx-background-image: url(".png"); */
 	
-}
-.SignIn .button:disabled{
 }
 
 .SignIn .text-field{
@@ -55,6 +56,7 @@
 	-fx-background-image: url("Reg_TFDisabled.png");
 	-fx-font-size: 14;
 	-fx-highlight-fill: #f9f9f9;
+	-fx-text-fill: #4A4A4A;
 }
 .Registration .text-field:focused{
 	-fx-background-image: url("Reg_TFEnabled.png");
@@ -68,4 +70,7 @@
 #Reg_backbutton{
 	-fx-background-image: url("Reg_BTDisabled.png");	
 }
+
+
+
 

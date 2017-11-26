@@ -11,12 +11,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="370.0" styleClass="SignIn" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="370.0" styleClass="SignIn" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
    <children>
       <Pane layoutY="-7.0" pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-7.0">
          <children>
             <Button fx:id="RegActiontarget" layoutX="94.0" layoutY="515.0" mnemonicParsing="false" onAction="#hRegButtonAction" prefHeight="28.0" prefWidth="193.0" text="회원 가입" />
-            <Button layoutX="94.0" layoutY="479.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="28.0" prefWidth="193.0" text="로그인">
+            <Button layoutX="94.0" layoutY="479.0" mnemonicParsing="false" onAction="#hSIButtonAction" pickOnBounds="false" prefHeight="28.0" prefWidth="193.0" text="로그인">
                <rotationAxis>
                   <Point3D />
                </rotationAxis></Button>
