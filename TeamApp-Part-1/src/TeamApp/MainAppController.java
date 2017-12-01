@@ -10,13 +10,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.mybatis.domain.MemberDTO;
 
 public class MainAppController {
 	@FXML private Button RegActiontarget;
@@ -24,6 +28,14 @@ public class MainAppController {
 	@FXML private Label ChangePWDActiontarget;
 	@FXML private AnchorPane rootPane;	
 	
+	//회원가입 라벨정보
+	@FXML private TextField UserName;
+	@FXML private TextField PWD1;
+	@FXML private TextField PWD2;
+	@FXML private TextField RealName;
+	@FXML private TextField Question;
+	@FXML private TextField Answer;
+
 // 로그인 / 회원가입 페이지 --------------------------------------------------------------------------------
 	
 	// 회원가입 버튼(로그인 화면)
@@ -46,6 +58,28 @@ public class MainAppController {
 			ex.printStackTrace();
 		}
 	}
+	
+	
+	// 회원가입 버튼(회원가입 화면)
+	@FXML
+	protected void hRegistrationBackAction(ActionEvent event) {
+		String username = UserName.getText();
+		String pwd = PWD1.getText();
+		String realname = RealName.getText();
+		String question = Question.getText();
+		String answer = Answer.getText();
+		
+		MemberDAO dao = new MemberDAO();
+		dao.insert(username, pwd, realname, question, answer);
+		
+		try {
+			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/SignIn.fxml"));
+			rootPane.getChildren().setAll(pane);
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+	
 	// 비밀번호변경 버튼(로그인 화면)
 	@FXML protected void hChangePWDButtonAction(MouseEvent event) {
 		try {

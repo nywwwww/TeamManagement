@@ -16,7 +16,7 @@
       <Pane pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" styleClass="Registration" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button id="Reg_backbutton" fx:id="BackActiontarget" layoutX="16.0" layoutY="545.0" mnemonicParsing="false" onAction="#hBackButtonAction" prefHeight="35.0" prefWidth="342.0" text="돌아가기" />
-            <Button layoutX="16.0" layoutY="504.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="35.0" prefWidth="342.0" text="회원가입">
+            <Button layoutX="16.0" layoutY="504.0" mnemonicParsing="false" onAction="#hRegistrationBackAction" pickOnBounds="false" prefHeight="35.0" prefWidth="342.0" text="회원가입">
                <rotationAxis>
                   <Point3D />
                </rotationAxis></Button>
@@ -26,12 +26,12 @@
                   <Image url="@../res/Reg_sheetbg.png" />
                </image>
             </ImageView>
-            <TextField layoutX="66.0" layoutY="110.0" prefHeight="35.0" prefWidth="240.0" promptText="사용자 이름" />
-            <TextField layoutX="66.0" layoutY="260.0" prefHeight="35.0" prefWidth="240.0" promptText="실명" />
-            <TextField layoutX="66.0" layoutY="310.0" prefHeight="35.0" prefWidth="240.0" promptText="비밀번호 찾기 질문" />
-            <TextField layoutX="66.0" layoutY="360.0" prefHeight="35.0" prefWidth="240.0" promptText="비밀번호 찾기 답" />
-            <PasswordField layoutX="66.0" layoutY="160.0" prefHeight="35.0" prefWidth="240.0" promptText="암호" />
-            <PasswordField layoutX="66.0" layoutY="210.0" prefHeight="35.0" prefWidth="240.0" promptText="암호 재입력" />
+            <TextField fx:id="UserName" layoutX="66.0" layoutY="110.0" prefHeight="35.0" prefWidth="240.0" promptText="사용자 이름" />
+            <TextField fx:id="RealName" layoutX="66.0" layoutY="260.0" prefHeight="35.0" prefWidth="240.0" promptText="실명" />
+            <TextField fx:id="Question" layoutX="66.0" layoutY="310.0" prefHeight="35.0" prefWidth="240.0" promptText="비밀번호 찾기 질문" />
+            <TextField fx:id="Answer" layoutX="66.0" layoutY="360.0" prefHeight="35.0" prefWidth="240.0" promptText="비밀번호 찾기 답" />
+            <PasswordField fx:id="PWD1" layoutX="66.0" layoutY="160.0" prefHeight="35.0" prefWidth="240.0" promptText="암호" />
+            <PasswordField fx:id="PWD2" layoutX="66.0" layoutY="210.0" prefHeight="35.0" prefWidth="240.0" promptText="암호 재입력" />
             <Label layoutX="77.0" layoutY="291.0" text="미입력시 사용자 이름으로 대체합니다." textFill="#616161">
                <font>
                   <Font name="NanumSquare Regular" size="12.0" />
