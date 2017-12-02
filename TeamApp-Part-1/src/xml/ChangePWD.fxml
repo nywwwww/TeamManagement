@@ -14,7 +14,7 @@
       <Pane pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" styleClass="Registration" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button id="Reg_backbutton" fx:id="BackActiontarget" layoutX="16.0" layoutY="545.0" mnemonicParsing="false" onAction="#hBackButtonAction" prefHeight="35.0" prefWidth="342.0" text="돌아가기" />
-            <Button layoutX="16.0" layoutY="504.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="35.0" prefWidth="342.0" text="회원가입">
+            <Button layoutX="16.0" layoutY="504.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="35.0" prefWidth="342.0" text="암호 변경">
                <rotationAxis>
                   <Point3D />
                </rotationAxis></Button>

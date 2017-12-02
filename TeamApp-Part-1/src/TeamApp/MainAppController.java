@@ -28,7 +28,7 @@ public class MainAppController {
 	@FXML private Label ChangePWDActiontarget;
 	@FXML private AnchorPane rootPane;	
 	
-	//회원가입 라벨정보
+	//회원가입 텍스트필드
 	@FXML private TextField UserName;
 	@FXML private TextField PWD1;
 	@FXML private TextField PWD2;

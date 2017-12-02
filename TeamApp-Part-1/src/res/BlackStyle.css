@@ -22,6 +22,7 @@
     -fx-background-image: url("SI_bg.png");
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
+    	-fx-font-size: 11;
 }
 
 .SignIn .button{
@@ -37,7 +38,7 @@
 
 .SignIn .text-field{
 	-fx-background-image: url("SI_TFDisabled.png");
-	-fx-text-fill: #f9f9f9;
+	-fx-text-fill: #55BDA6;
 	-fx-font-size: 14;
 	-fx-highlight-fill: #f9f9f9;
 	-fx-alignment: center_left;
@@ -96,5 +97,17 @@
 	-fx-opacity : 0.6;
 }
 
+.subMenu{
+	-fx-background-image: url("SubMenuBg.png");
+	-fx-font-family: "NanumBarunGothic";
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    	-fx-font-size: 11;
+}
 
+.subMenu .button{
+	-fx-background-image: url("SubMenu_BT.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
 

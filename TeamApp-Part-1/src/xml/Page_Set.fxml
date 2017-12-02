@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1195.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1195.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="40.0" layoutY="42.0" prefHeight="115.0" prefWidth="706.0" text="Settings Page">
-         <font>
-            <Font name="NanumSquare ExtraBold" size="64.0" />
-         </font>
-      </Label>
-      <Label layoutX="53.0" layoutY="84.0" prefHeight="115.0" prefWidth="706.0" text="Example Label">
-         <font>
-            <Font name="NanumSquare Light" size="23.0" />
-         </font>
-      </Label>
+      <SplitPane dividerPositions="0.19416666666666665" prefHeight="767.0" prefWidth="1202.0">
+         <items>
+            <AnchorPane id="subMenu" maxWidth="252.0" minWidth="252.0" prefHeight="200.0" prefWidth="252.0" styleClass="subMenu">
+               <children>
+                  <ImageView fitHeight="81.0" fitWidth="268.0" layoutX="-5.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../res/SubMenu_titleSet.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="팀 관리" />
+                  <Button layoutX="-4.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="개인 관리" />
+                  <Button layoutX="-4.0" layoutY="154.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="오픈소스 라이센스" />
+                  <Button layoutX="-4.0" layoutY="192.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="프로그램 정보" />
+               </children>
+            </AnchorPane>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="780.0" prefWidth="930.0" styleClass="realViewPane" stylesheets="@../res/BlackStyle.css" />
+              </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
    </children>
 </AnchorPane>

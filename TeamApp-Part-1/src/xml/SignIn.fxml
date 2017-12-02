@@ -27,7 +27,7 @@
             <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="100.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="239.0" fitWidth="239.0" layoutX="76.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" styleClass="SignIn" />
             <PasswordField layoutX="66.0" layoutY="374.0" prefHeight="35.0" prefWidth="240.0" promptText="암호" />
-            <Label fx:id="ChangePWDActiontarget" alignment="CENTER" layoutX="131.0" layoutY="550.0" onMouseClicked="#hChangePWDButtonAction" text="비밀번호를 잊어버렸어요!" textAlignment="CENTER" textFill="#b5b5b5">
+            <Label fx:id="ChangePWDActiontarget" alignment="CENTER" layoutX="131.0" layoutY="550.0" onMouseClicked="#hChangePWDButtonAction" text="      암호를 잊어버렸어요!" textAlignment="CENTER" textFill="#b5b5b5">
                <font>
                   <Font name="NanumSquare Regular" size="10.0" />
                </font>
