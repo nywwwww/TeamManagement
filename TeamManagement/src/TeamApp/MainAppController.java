@@ -273,7 +273,6 @@ public class MainAppController {
 		}
 		else {
 			changeLabel.setText("존재하지 않는 계정입니다");
-			changeImg.setVisible(true);
 		}
 		
 	}
