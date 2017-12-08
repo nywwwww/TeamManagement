@@ -59,6 +59,21 @@ public class MemberDAO {
 		}
 		return member;
 	}
+
+	public MemberDTO checkUID(int uid) {	
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		MemberDTO member = new MemberDTO();
+		try {
+			member.setUID(uid);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.selectUID", member);
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return member;
+	}
 	
 	public boolean isExist(String name) {
 		boolean result = false;

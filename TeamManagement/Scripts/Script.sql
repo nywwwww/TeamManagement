@@ -1,0 +1,1 @@
+ALTER TABLE hanumdb.`User` MODIFY COLUMN UID INT NULL AUTO_INCREMENT primary key ;

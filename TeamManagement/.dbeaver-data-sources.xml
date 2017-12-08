@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql5-16036e5d318-5353fa2d6cbc34" provider="mysql" driver="mysql5" name="MySQL - hanumdb" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="hanumdb.cubl0ide0xeh.us-east-2.rds.amazonaws.com" port="3306" server="" database="hanumdb" url="jdbc:mysql://hanumdb.cubl0ide0xeh.us-east-2.rds.amazonaws.com:3306/hanumdb" user="hanum" password="GxcHcRESFEdEcuc=" type="dev">
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="false">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<bootstrap autocommit="false"/>
+		</connection>
+		<virtual-meta-data>
+			<container name="model">
+				<container name="hanumdb">
+					<entity name="User">
+						<constraint name="PRIMARY" type="VIRTUAL KEY">
+							<attribute name="UID"/>
+							<attribute name="PWD"/>
+							<attribute name="UserName"/>
+							<attribute name="RealName"/>
+							<attribute name="Question"/>
+							<attribute name="Answer"/>
+							<attribute name="LinkedTID"/>
+						</constraint>
+					</entity>
+				</container>
+			</container>
+		</virtual-meta-data>
+	</data-source>
+	<filters/>
+</data-sources>

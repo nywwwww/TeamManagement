@@ -26,6 +26,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.mybatis.domain.MemberDTO;
 
 public class MainAppController {
+
+	static public int s_uid;
 	@FXML private Button RegActiontarget;
 	@FXML private Button BackActiontarget;
 	@FXML private Label ChangePWDActiontarget;
@@ -67,6 +69,7 @@ public class MainAppController {
 			String username = LoginId.getText();
 			String pwd = LoginPWD.getText();
 			
+			// 객체(텍스트필드)로부터 값 입력
 			if(username.equals("")) {
 				signLabel.setText("계정명을 입력하세요");
 				signImg.setVisible(true);
@@ -78,6 +81,7 @@ public class MainAppController {
 				return;
 			}
 			
+			// DB에서 체크 후 유효성판단
 			MemberDAO dao = new MemberDAO();
 			MemberDTO dto = null;
 			state = dao.isExist(username);
@@ -85,6 +89,8 @@ public class MainAppController {
 				dto = dao.checkUsername(username);
 				if(dto.getPWD().equals(pwd)) {
 					try {
+						s_uid = dto.getUID(); // 다음 화면으로 UID 넘겨줌.
+						// 화면전환 
 						Parent page = FXMLLoader.load(getClass().getResource("/xml/index.fxml"));
 						Scene scene = new Scene(page);
 						scene.getStylesheets().add(MainApp.class.getResource("/res/BlackStyle.css").toExternalForm());
@@ -276,26 +282,6 @@ public class MainAppController {
 			changeImg.setVisible(true);
 		}
 		
-	}
-	
-// 메인 페이지 --------------------------------------------------------------------------------
-	// 사이드 메뉴 --------------------------------------------------------------------------------
-	@FXML private AnchorPane viewPane;
-	public void hMenuTeamButtonAction(MouseEvent event) throws IOException  {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Team.fxml"));
-		viewPane.getChildren().setAll(pane);
-	}
-	public void hMenuComButtonAction(MouseEvent event) throws IOException  {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Com.fxml"));
-		viewPane.getChildren().setAll(pane);
-	}
-	public void hMenuTodoButtonAction(MouseEvent event) throws IOException  {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Todo.fxml"));
-		viewPane.getChildren().setAll(pane);
-	}
-	public void hMenuSetButtonAction(MouseEvent event) throws IOException  {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
-		viewPane.getChildren().setAll(pane);
 	}
 }
 

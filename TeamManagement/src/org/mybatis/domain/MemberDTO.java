@@ -1,12 +1,18 @@
 package org.mybatis.domain;
 
 public class MemberDTO {
+	int UID;
 	String PWD;
 	String UserName;
 	String RealName;
 	String Question;
 	String Answer;
-	
+	public int getUID() {
+		return UID;
+	}
+	public int setUID(int uid) {
+		return UID=uid;
+	}
 	public String getPWD() {
 		return PWD;
 	}
