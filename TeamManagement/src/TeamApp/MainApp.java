@@ -25,7 +25,6 @@ public class MainApp extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		try {
             stage = primaryStage;
-            //
             // 폰트 로드
             Font.loadFont(getClass().getResourceAsStream("/res/NanumSquareB.ttf"),14 );
             Font.loadFont(getClass().getResourceAsStream("/res/NanumSquareEB.ttf"),14 );
