@@ -1,0 +1,112 @@
+
+/* 전체공통-------------------------------------------- */
+.button{
+	-fx-background-color: transparent;
+}
+.button:hover{
+	-fx-opacity : 0.8;
+}
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: transparent;
+   -fx-padding: 0 0 0 0;
+}
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: transparent;
+   -fx-padding: 0 0 0 0;
+}
+
+/* Sign In (로그인) 페이지-------------------------------------------- */
+
+.SignIn {
+	-fx-font-family: "NanumBarunGothic";
+    -fx-background-image: url("SI_bg.png");
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    	-fx-font-size: 11;
+}
+
+.SignIn .button{
+	-fx-background-image: url("SI_BT.png");
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+
+.SignIn .button:pressed{
+	/*-fx-sbackground-image: url(".png"); */
+	
+}
+
+.SignIn .text-field{
+	-fx-background-image: url("SI_TFDisabled.png");
+	-fx-text-fill: #55BDA6;
+	-fx-font-size: 14;
+	-fx-highlight-fill: #f9f9f9;
+	-fx-alignment: center_left;
+}
+.SignIn .text-field:focused{
+	-fx-background-image: url("SI_TFEnabled.png");
+}
+
+
+
+
+/* Reistration (회원가입) 페이지-------------------------------------------- */
+
+.Registration {
+	-fx-font-family: "NanumBarunGothic";
+    -fx-background-image: url("SI_bg.png");
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.Registration .Label{
+	-fx-font-family: "NanumSquareL";
+}
+
+.Registration .text-field{
+	-fx-background-image: url("Reg_TFDisabled.png");
+	-fx-font-size: 14;
+	-fx-highlight-fill: #f9f9f9;
+	-fx-text-fill: #4A4A4A;
+}
+.Registration .text-field:focused{
+	-fx-background-image: url("Reg_TFEnabled.png");
+}
+
+.Registration .button{
+	-fx-background-image: url("Reg_BTEnabled.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+#Reg_backbutton{
+	-fx-background-image: url("Reg_BTDisabled.png");	
+}
+
+
+/* mainTemplate 메인 - 전체 템플릿 -------------------------------------------- */
+
+.sidebar{
+	-fx-background-image: url("ind_sidebarBG.png");
+}
+.topbar{
+	-fx-background-image: url("ind_topbarBG.png");
+}
+
+/* 사이드메뉴 통합 CSS */
+.sideMenu:hover{
+	-fx-opacity : 0.6;
+}
+
+.subMenu{
+	-fx-background-image: url("SubMenuBg.png");
+	-fx-font-family: "NanumBarunGothic";
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    	-fx-font-size: 11;
+}
+
+.subMenu .button{
+	-fx-background-image: url("SubMenu_BT.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias alias="member" type="org.mybatis.domain.MemberDTO" />
+	</typeAliases>
+	 <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver"
+                	value="com.mysql.jdbc.Driver" />
+                <property name="url"
+                	value="jdbc:mysql://hanumdb.cubl0ide0xeh.us-east-2.rds.amazonaws.com/hanumdb?useUnicode=true&amp;characterEncoding=UTF-8&amp;jdbcCompliantTruncation=false" />
+                <property name="username"
+                	value="hanum" />
+                <property name="password"
+                	value="hsa10101!" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+    	<mapper resource="mybatis/Membermanage.xml"/>
+    </mappers>
+</configuration>

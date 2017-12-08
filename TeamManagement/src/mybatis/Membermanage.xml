@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="org.mybatis.persistence.Membermanage">
+ 
+ 	<select id="select" parameterType="member" resultType="member">
+	 	SELECT UserName, PWD, RealName, Question, Answer
+	 	from User
+	 	WHERE UserName = #{UserName}
+ 	</select>
+ 
+	<insert id="insert" parameterType="member">
+ 		INSERT INTO User (UserName, PWD, RealName, Question, Answer)
+ 		VALUES (#{UserName}, #{PWD}, #{RealName}, #{Question}, #{Answer})
+ 	</insert>
+ 	
+ </mapper>

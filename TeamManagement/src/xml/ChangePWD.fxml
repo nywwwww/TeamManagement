@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
+   <children>
+      <Pane pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" styleClass="Registration" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="Reg_backbutton" fx:id="BackActiontarget" layoutX="16.0" layoutY="545.0" mnemonicParsing="false" onAction="#hBackButtonAction" prefHeight="35.0" prefWidth="342.0" text="돌아가기" />
+            <Button layoutX="16.0" layoutY="504.0" mnemonicParsing="false" onAction="#hChangeButtonAction" pickOnBounds="false" prefHeight="35.0" prefWidth="342.0" text="회원가입">
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis></Button>
+            <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="100.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView disable="true" fitHeight="407.0" fitWidth="342.0" layoutX="17.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/CPWD_sheetbg.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="changeUserName" layoutX="66.0" layoutY="90.0" prefHeight="35.0" prefWidth="240.0" promptText="사용자 이름" />
+            <TextField fx:id="changeAnswer" layoutX="66.0" layoutY="130.0" prefHeight="35.0" prefWidth="240.0" promptText="사용자 이름을 먼저 확인해주세요" />
+            <PasswordField fx:id="changePWD2" layoutX="66.0" layoutY="210.0" prefHeight="35.0" prefWidth="240.0" promptText="암호 재입력" />
+            <PasswordField fx:id="changePWD1" layoutX="66.0" layoutY="170.0" prefHeight="35.0" prefWidth="240.0" promptText="암호" />
+            <Button layoutX="250.0" layoutY="93.0" mnemonicParsing="false" onAction="#hChangeCheckUsernameAction" text="확인" />
+            <Label fx:id="changeLabel" layoutX="134.0" layoutY="277.0" prefHeight="15.0" prefWidth="152.0" textAlignment="CENTER" textFill="#fcfafa" />
+            <ImageView fx:id="changeImg" fitHeight="15.0" fitWidth="15.0" layoutX="109.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../res/WarnIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

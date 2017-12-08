@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="370.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
+   <children>
+      <Pane layoutX="1.0" pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" styleClass="Registration" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="Reg_backbutton" fx:id="BackActiontarget" layoutX="16.0" layoutY="545.0" mnemonicParsing="false" onAction="#hBackButtonAction" prefHeight="35.0" prefWidth="342.0" text="돌아가기" />
+            <Button layoutX="16.0" layoutY="504.0" mnemonicParsing="false" onAction="#hRegistrationBackAction" pickOnBounds="false" prefHeight="35.0" prefWidth="342.0" text="회원가입">
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis></Button>
+            <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="100.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView disable="true" fitHeight="407.0" fitWidth="342.0" layoutX="17.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Reg_sheetbg.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="UserName" layoutX="66.0" layoutY="110.0" prefHeight="35.0" prefWidth="240.0" promptText="사용자 이름" />
+            <PasswordField fx:id="PWD1" layoutX="66.0" layoutY="160.0" prefHeight="35.0" prefWidth="240.0" promptText="암호" />
+            <PasswordField fx:id="PWD2" layoutX="66.0" layoutY="210.0" prefHeight="35.0" prefWidth="240.0" promptText="암호 재입력" />
+            <TextField fx:id="RealName" layoutX="66.0" layoutY="260.0" prefHeight="35.0" prefWidth="240.0" promptText="실명" />
+            <TextField fx:id="Question" layoutX="66.0" layoutY="310.0" prefHeight="35.0" prefWidth="240.0" promptText="비밀번호 찾기 질문" />
+            <TextField fx:id="Answer" layoutX="66.0" layoutY="360.0" prefHeight="35.0" prefWidth="240.0" promptText="비밀번호 찾기 답" />
+            <Label layoutX="77.0" layoutY="291.0" text="미입력시 사용자 이름으로 대체합니다." textFill="#616161">
+               <font>
+                  <Font name="NanumSquare Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="341.0" text="예. 당신의 출신 초등학교는?" textFill="#616161">
+               <font>
+                  <Font name="NanumSquare Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="regLabel" layoutX="124.0" layoutY="476.0" prefHeight="15.0" prefWidth="152.0" textAlignment="CENTER" textFill="#fcfafa" />
+            <ImageView fx:id="regImg" fitHeight="15.0" fitWidth="15.0" layoutX="104.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../res/WarnIcon.png" />
+               </image></ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
