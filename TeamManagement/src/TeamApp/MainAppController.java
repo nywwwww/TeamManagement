@@ -267,12 +267,12 @@ public class MainAppController {
 				}
 			}
 			else {
-				changeLabel.setText("�亯�� ��ġ�����ʽ��ϴ�");
+				changeLabel.setText("답변이 일치하지 않습니다");
 				changeImg.setVisible(true);
 			}
 		}
 		else {
-			changeLabel.setText("�������� �ʴ� �����Դϴ�");
+			changeLabel.setText("존재하지 않는 계정입니다");
 			changeImg.setVisible(true);
 		}
 		
