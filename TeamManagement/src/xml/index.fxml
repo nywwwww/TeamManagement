@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<SplitPane dividerPositions="0.055" maxHeight="826.0" maxWidth="1280.0" minHeight="826.0" minWidth="1280.0" prefHeight="826.0" prefWidth="1280.0" styleClass="mainTemplate" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
+<SplitPane fx:id="index" dividerPositions="0.055" maxHeight="826.0" maxWidth="1280.0" minHeight="826.0" minWidth="1280.0" prefHeight="826.0" prefWidth="1280.0" styleClass="mainTemplate" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.PageController">
    <items>
       <AnchorPane maxWidth="70.0" minWidth="70.0" prefHeight="826.0" prefWidth="1280.0" styleClass="sidebar" stylesheets="@../res/BlackStyle.css">
          <children>
@@ -49,7 +50,10 @@
       </AnchorPane>
       <SplitPane dividerPositions="0.085" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
         <items>
-          <AnchorPane maxHeight="70.0" minHeight="70.0" minWidth="0.0" prefHeight="70.0" prefWidth="1388.0" styleClass="topbar" />
+          <AnchorPane maxHeight="70.0" minHeight="70.0" minWidth="0.0" prefHeight="70.0" prefWidth="1388.0" styleClass="topbar">
+               <children>
+                  <Label fx:id="TitleLabel" layoutX="55.0" layoutY="23.0" text="Title"/>
+               </children></AnchorPane>
           <AnchorPane fx:id="viewPane" minHeight="0.0" minWidth="0.0" prefHeight="760.0" prefWidth="1195.0" />
         </items>
       </SplitPane>

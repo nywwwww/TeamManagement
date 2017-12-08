@@ -29,7 +29,7 @@
             <TextField fx:id="changeAnswer" layoutX="66.0" layoutY="130.0" prefHeight="35.0" prefWidth="240.0" promptText="사용자 이름을 먼저 확인해주세요" />
             <PasswordField fx:id="changePWD2" layoutX="66.0" layoutY="210.0" prefHeight="35.0" prefWidth="240.0" promptText="암호 재입력" />
             <PasswordField fx:id="changePWD1" layoutX="66.0" layoutY="170.0" prefHeight="35.0" prefWidth="240.0" promptText="암호" />
-            <Button layoutX="250.0" layoutY="93.0" mnemonicParsing="false" onAction="#hChangeCheckUsernameAction" text="확인" />
+            <Button layoutX="268.0" layoutY="93.0" mnemonicParsing="false" onAction="#hChangeCheckUsernameAction" text="확인" />
             <Label fx:id="changeLabel" layoutX="134.0" layoutY="277.0" prefHeight="15.0" prefWidth="152.0" textAlignment="CENTER" textFill="#fcfafa" />
             <ImageView fx:id="changeImg" fitHeight="15.0" fitWidth="15.0" layoutX="109.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>

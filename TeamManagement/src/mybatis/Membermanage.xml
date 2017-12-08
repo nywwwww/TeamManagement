@@ -6,9 +6,15 @@
  <mapper namespace="org.mybatis.persistence.Membermanage">
  
  	<select id="select" parameterType="member" resultType="member">
-	 	SELECT UserName, PWD, RealName, Question, Answer
+	 	SELECT UID,UserName, PWD, RealName, Question, Answer
 	 	from User
 	 	WHERE UserName = #{UserName}
+ 	</select>
+ 	
+ 	 <select id="selectUID" parameterType="member" resultType="member">
+	 	SELECT UID,UserName, PWD, RealName, Question, Answer
+	 	from User
+	 	WHERE UID = #{UID}
  	</select>
  
 	<insert id="insert" parameterType="member">
