@@ -78,4 +78,19 @@ public class MemberDAO {
 		return result;
 	}
 	
+	public void updatePWD(String name, String PWD) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setUserName(name);
+			member.setPWD(PWD);
+			sqlSession.update("org.mybatis.persistence.Membermanage.update", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
 }

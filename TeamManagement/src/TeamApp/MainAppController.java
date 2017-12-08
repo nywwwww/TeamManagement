@@ -257,13 +257,22 @@ public class MainAppController {
 		state = dao.isExist(username);
 		if(state == true) {
 			dto = dao.checkUsername(username);
-			if(!dto.getAnswer().equals(answer)) {
-				changeLabel.setText("답변이 일치하지않습니다");
+			if(dto.getAnswer().equals(answer)) {
+				dao.updatePWD(username, pwd1);
+				try {
+					AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/SignIn.fxml"));
+					rootPane.getChildren().setAll(pane);
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+			}
+			else {
+				changeLabel.setText("�亯�� ��ġ�����ʽ��ϴ�");
 				changeImg.setVisible(true);
 			}
 		}
 		else {
-			changeLabel.setText("존재하지 않는 계정입니다");
+			changeLabel.setText("�������� �ʴ� �����Դϴ�");
 			changeImg.setVisible(true);
 		}
 		
