@@ -267,7 +267,7 @@ public class MainAppController {
 				}
 			}
 			else {
-				changeLabel.setText("답변이 일치하지 않습니다");
+				changeLabel.setText("답변이 일치하지 않습니다 ");
 				changeImg.setVisible(true);
 			}
 		}
