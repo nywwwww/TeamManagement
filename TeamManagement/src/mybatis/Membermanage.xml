@@ -16,4 +16,9 @@
  		VALUES (#{UserName}, #{PWD}, #{RealName}, #{Question}, #{Answer})
  	</insert>
  	
+ 	<update id="update" parameterType="member">
+ 		UPDATE User
+ 		SET PWD = #{PWD}
+ 		WHERE UserName = #{UserName}
+ 	</update>
  </mapper>
