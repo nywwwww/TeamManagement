@@ -35,5 +35,23 @@
 			</container>
 		</virtual-meta-data>
 	</data-source>
+	<data-source id="mysql5-1603a047731-7c8d7c11f10ad058" provider="mysql" driver="mysql5" name="MySQL - hanumdb - seoul" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="hanumdb.ctbjipbqshvk.ap-northeast-2.rds.amazonaws.com" port="3306" server="" database="hanumdb" url="jdbc:mysql://hanumdb.ctbjipbqshvk.ap-northeast-2.rds.amazonaws.com:3306/hanumdb" user="hanum" password="GxcHcRESFEdEcuc=" type="dev">
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="false">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+			<bootstrap autocommit="false"/>
+		</connection>
+	</data-source>
 	<filters/>
 </data-sources>

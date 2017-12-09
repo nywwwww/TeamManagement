@@ -20,7 +20,7 @@ public class PageController {
 		MemberDAO dao = new MemberDAO();
 		MemberDTO dto = null;
 		dto = dao.checkUID(s_uid);
-		TitleLabel.setText(dto.getRealName());
+		TitleLabel.setText("안녕하세요, "+dto.getRealName()+"님!");
 	}
 	// 메인 페이지 --------------------------------------------------------------------------------
 		// 사이드 메뉴 --------------------------------------------------------------------------------
