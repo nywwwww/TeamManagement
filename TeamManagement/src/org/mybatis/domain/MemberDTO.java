@@ -2,11 +2,27 @@ package org.mybatis.domain;
 
 public class MemberDTO {
 	int UID;
+	int LinkedTID;
+	int TID;
 	String PWD;
 	String UserName;
 	String RealName;
 	String Question;
 	String Answer;
+	
+
+	public int getTID() {
+		return TID;
+	}
+	public int setTID(int TID) {
+		return this.TID = TID;
+	}
+	public int getLinkedTID() {
+		return LinkedTID;
+	}
+	public int setLinkedTID(int LinkedTID) {
+		return this.LinkedTID = LinkedTID;
+	}
 	public int getUID() {
 		return UID;
 	}

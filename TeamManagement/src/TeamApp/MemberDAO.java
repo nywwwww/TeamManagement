@@ -34,7 +34,7 @@ public class MemberDAO {
 			member.setRealName(RealName);
 			member.setQuestion(Question);
 			member.setAnswer(Answer);
-			sqlSession.insert("org.mybatis.persistence.Membermanage.insert", member);
+			sqlSession.insert("org.mybatis.persistence.Membermanage.User_insert", member);
 			sqlSession.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -50,7 +50,7 @@ public class MemberDAO {
 		MemberDTO member = new MemberDTO();
 		try {
 			member.setUserName(name);
-			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.select", member);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.User_selectUserName", member);
 		} catch (Exception e) {
 			e.printStackTrace();
 			sqlSession.rollback();
@@ -65,7 +65,7 @@ public class MemberDAO {
 		MemberDTO member = new MemberDTO();
 		try {
 			member.setUID(uid);
-			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.selectUID", member);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.User_selectUID", member);
 		} catch (Exception e) {
 			e.printStackTrace();
 			sqlSession.rollback();
@@ -81,7 +81,7 @@ public class MemberDAO {
 		try {
 			MemberDTO member = new MemberDTO();
 			member.setUserName(name);
-			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.select", member);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.User_selectUserName", member);
 			if(member.getUserName().equals(name))
 				result = true;
 		} catch (Exception e) {
@@ -92,6 +92,26 @@ public class MemberDAO {
 		}
 		return result;
 	}
+
+	public boolean isExistTID(int TID) {
+		boolean result = false;
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setTID(TID);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.Team_selectTID", member);
+			if((member.getTID() == TID))
+				result = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return result;
+	}
+	
+	
 	
 	public void updatePWD(String name, String PWD) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();

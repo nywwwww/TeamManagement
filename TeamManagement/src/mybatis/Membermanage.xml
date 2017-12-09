@@ -5,26 +5,32 @@
  
  <mapper namespace="org.mybatis.persistence.Membermanage">
  
- 	<select id="select" parameterType="member" resultType="member">
-	 	SELECT UID,UserName, PWD, RealName, Question, Answer
+ 	<select id="User_selectUserName" parameterType="member" resultType="member">
+	 	SELECT UID,UserName, PWD, RealName, Question, Answer,LinkedTID
 	 	from User
 	 	WHERE UserName = #{UserName}
  	</select>
  	
- 	 <select id="selectUID" parameterType="member" resultType="member">
-	 	SELECT UID,UserName, PWD, RealName, Question, Answer
+ 	 <select id="User_selectUID" parameterType="member" resultType="member">
+	 	SELECT UID,UserName, PWD, RealName, Question, Answer, LinkedTID
 	 	from User
 	 	WHERE UID = #{UID}
  	</select>
  
-	<insert id="insert" parameterType="member">
+	<insert id="User_insert" parameterType="member">
  		INSERT INTO User (UserName, PWD, RealName, Question, Answer)
  		VALUES (#{UserName}, #{PWD}, #{RealName}, #{Question}, #{Answer})
  	</insert>
  	
- 	<update id="update" parameterType="member">
+ 	<update id="User_update" parameterType="member">
  		UPDATE User
  		SET PWD = #{PWD}
  		WHERE UserName = #{UserName}
  	</update>
+ 	
+ 	<select id="Team_selectTID" parameterType="member" resultType="member">
+	 	SELECT TID, TeamName, Auth, Reader
+	 	from Team
+	 	WHERE TID = #{TID}
+ 	</select>
  </mapper>
