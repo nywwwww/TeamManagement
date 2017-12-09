@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="realViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="930.0" styleClass="setRealPane" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Set.NoTeamController">
+   <children>
+      <ImageView fitHeight="262.0" fitWidth="281.0" layoutX="99.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/Set_NT_bg.png" />
+         </image></ImageView>
+      <ImageView fitHeight="54.0" fitWidth="379.0" layoutX="291.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/Set_NT_Label.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="setCreateTeamPane" layoutX="6.0" layoutY="272.0" prefHeight="236.0" prefWidth="919.0" styleClass="FramePane">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="919.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameHead.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="484.0" layoutX="2.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameSubtitle.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="12.0" styleClass="FrameTitle" text="팀 만들기" />
+            <Label layoutX="13.0" layoutY="42.0" styleClass="FrameSubtitle" text="새로운 팀을 만듭니다" />
+            <TextField fx:id="TeamNameField" layoutX="21.0" layoutY="65.0" prefHeight="33.0" prefWidth="237.0" promptText="팀 이름을 입력하세요" />
+            <TextField fx:id="ObjectiveField" layoutX="21.0" layoutY="126.0" prefHeight="33.0" prefWidth="590.0" promptText="팀의 목표를 입력하세요 (100자)" />
+            <TextField fx:id="LeaderField" disable="true" layoutX="21.0" layoutY="96.0" prefHeight="33.0" prefWidth="237.0" promptText="팀장 이름" />
+            <Button layoutX="718.0" layoutY="199.0" mnemonicParsing="false" onAction="#hSetCreateButtonAction" prefHeight="28.0" prefWidth="193.0" text="만들기" />
+            <Label fx:id="setRegLabel" layoutX="531.0" layoutY="203.0" textAlignment="RIGHT" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="setInvitedTeamPane" layoutX="6.0" layoutY="508.0" prefHeight="236.0" prefWidth="919.0" styleClass="FramePane">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="919.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameHead.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="484.0" layoutX="2.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameSubtitle.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="13.0" layoutY="12.0" styleClass="FrameTitle" text="받은 초대" />
+            <Label layoutX="12.0" layoutY="42.0" styleClass="FrameSubtitle" text="초대받은 팀이 여기에 표시됩니다" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

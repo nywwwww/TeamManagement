@@ -44,6 +44,25 @@ public class MemberDAO {
 		}
 	}
 	
+	// 팀 만들기 메소드
+	public void insertTeam(String TeamName, int Auth, int Leader, String Objective) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setTeamName(TeamName);
+			member.setAuth(Auth);
+			member.setLeader(Leader);
+			member.setObjective(Objective);
+			sqlSession.insert("org.mybatis.persistence.Membermanage.Team_insert", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
+	
 	//비밀번호변경 아이디확인함수
 	public MemberDTO checkUsername(String name) {	
 		SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -85,8 +104,7 @@ public class MemberDAO {
 			if(member.getUserName().equals(name))
 				result = true;
 		} catch (Exception e) {
-			e.printStackTrace();
-			sqlSession.rollback();
+			System.out.println("isExcist에서 값을 찾지 못해 False예외처리. ");
 		} finally {
 			sqlSession.close();
 		}
@@ -103,8 +121,7 @@ public class MemberDAO {
 			if((member.getTID() == TID))
 				result = true;
 		} catch (Exception e) {
-			e.printStackTrace();
-			sqlSession.rollback();
+			System.out.println("isExcistTID에서 값을 찾지 못해 False예외처리. ");
 		} finally {
 			sqlSession.close();
 		}

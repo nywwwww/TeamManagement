@@ -1,22 +1,16 @@
 package org.mybatis.domain;
 
 public class MemberDTO {
+	
+	// User 테이블
 	int UID;
 	int LinkedTID;
-	int TID;
 	String PWD;
 	String UserName;
 	String RealName;
 	String Question;
 	String Answer;
 	
-
-	public int getTID() {
-		return TID;
-	}
-	public int setTID(int TID) {
-		return this.TID = TID;
-	}
 	public int getLinkedTID() {
 		return LinkedTID;
 	}
@@ -58,5 +52,44 @@ public class MemberDTO {
 	}
 	public void setAnswer(String Answer) {
 		this.Answer = Answer;
+	}
+	
+
+	// Team 테이블
+	int TID;
+	String TeamName;
+	int Auth;
+	int Leader;
+	String Objective;
+
+	public int getTID() {
+		return TID;
+	}
+	public int setTID(int TID) {
+		return this.TID = TID;
+	}
+	public int getAuth() {
+		return Auth;
+	}
+	public int setAuth(int Auth) {
+		return this.Auth = Auth;
+	}
+	public String getTeamName() {
+		return TeamName;
+	}
+	public String setTeamName(String TeamName) {
+		return this.TeamName = TeamName;
+	}
+	public int getLeader() {
+		return Leader;
+	}
+	public int setLeader(int Leader) {
+		return this.Leader = Leader;
+	}
+	public String getObjective() {
+		return Objective;
+	}
+	public String setObjective(String Objective) {
+		return this.Objective = Objective;
 	}
 }

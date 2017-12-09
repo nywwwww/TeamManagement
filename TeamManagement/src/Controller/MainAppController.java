@@ -1,4 +1,4 @@
-package TeamApp;
+package Controller;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
@@ -24,6 +24,9 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.mybatis.domain.MemberDTO;
+
+import TeamApp.MainApp;
+import TeamApp.MemberDAO;
 
 public class MainAppController {
 
