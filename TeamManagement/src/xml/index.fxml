@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <SplitPane fx:id="index" dividerPositions="0.055" maxHeight="826.0" maxWidth="1280.0" minHeight="826.0" minWidth="1280.0" prefHeight="826.0" prefWidth="1280.0" styleClass="mainTemplate" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.PageController">
    <items>
@@ -50,9 +51,13 @@
       </AnchorPane>
       <SplitPane dividerPositions="0.085" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
         <items>
-          <AnchorPane maxHeight="70.0" minHeight="70.0" minWidth="0.0" prefHeight="70.0" prefWidth="1388.0" styleClass="topbar">
+          <AnchorPane maxHeight="70.0" minHeight="70.0" minWidth="0.0" prefHeight="70.0" prefWidth="1388.0" styleClass="topbar" stylesheets="@../res/BlackStyle.css">
                <children>
-                  <Label fx:id="TitleLabel" layoutX="55.0" layoutY="23.0" text="Title"/>
+                  <Label fx:id="TitleLabel" layoutX="55.0" layoutY="18.0" text="&lt;사용자 이름&gt; 님, 안녕하세요!">
+                     <font>
+                        <Font name="NanumBarunGothic" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="TeamLabel" layoutX="55.0" layoutY="36.0" text="참여중인 팀 이름" />
                </children></AnchorPane>
           <AnchorPane fx:id="viewPane" minHeight="0.0" minWidth="0.0" prefHeight="760.0" prefWidth="1195.0" />
         </items>
