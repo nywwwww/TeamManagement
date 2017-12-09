@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane fx:id="index" dividerPositions="0.055" maxHeight="826.0" maxWidth="1280.0" minHeight="826.0" minWidth="1280.0" prefHeight="826.0" prefWidth="1280.0" styleClass="mainTemplate" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.PageController">
+<SplitPane fx:id="index" dividerPositions="0.055" maxHeight="826.0" maxWidth="1280.0" minHeight="826.0" minWidth="1280.0" prefHeight="826.0" prefWidth="1280.0" styleClass="mainTemplate" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.indexController">
    <items>
       <AnchorPane maxWidth="70.0" minWidth="70.0" prefHeight="826.0" prefWidth="1280.0" styleClass="sidebar" stylesheets="@../res/BlackStyle.css">
          <children>

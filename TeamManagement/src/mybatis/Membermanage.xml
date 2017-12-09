@@ -29,8 +29,14 @@
  	</update>
  	
  	<select id="Team_selectTID" parameterType="member" resultType="member">
-	 	SELECT TID, TeamName, Auth, Reader
+	 	SELECT TID, TeamName, Auth, Leader, Objective
 	 	from Team
 	 	WHERE TID = #{TID}
  	</select>
+ 	
+ 		<insert id="Team_insert" parameterType="member">
+ 		INSERT INTO Team (TeamName, Auth, Leader, Objective)
+ 		VALUES (#{TeamName}, #{Auth}, #{Leader}, #{Objective})
+ 	</insert>
+ 	
  </mapper>

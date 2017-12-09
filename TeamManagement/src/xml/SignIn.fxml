@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="370.0" styleClass="SignIn" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeamApp.MainAppController">
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="370.0" styleClass="SignIn" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainAppController">
    <children>
       <Pane layoutY="-7.0" pickOnBounds="false" prefHeight="650.0" prefWidth="370.0" snapToPixel="false" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-7.0">
          <children>

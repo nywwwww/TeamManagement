@@ -50,7 +50,7 @@
 
 
 
-/* Reistration (회원가입) 페이지-------------------------------------------- */
+/* Reistration (회원가입) / ChangePWD 페이지-------------------------------------------- */
 
 .Registration {
 	-fx-font-family: "NanumBarunGothic";
@@ -68,6 +68,7 @@
 	-fx-font-size: 14;
 	-fx-highlight-fill: #f9f9f9;
 	-fx-text-fill: #4A4A4A;
+	-fx-background-color :transparent;
 }
 .Registration .text-field:focused{
 	-fx-background-image: url("Reg_TFEnabled.png");
@@ -121,3 +122,53 @@
 	-fx-text-fill: #f9f9f9;
 	-fx-underline: false;
 }
+
+
+/* Settings 관리 페이지 -------------------------------------------- */
+/* 각각의 프레임 (페이지 안의 틀)에 해당하는 설정 */
+.FrameSubtitle .label{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #4A4A4A;
+}
+.FramePane{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-background-image: url("Set_Frame.png");
+}
+
+.FrameTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 14;
+}
+
+.FramePane .text-field{
+	-fx-background-image: url("Reg_TFDisabled.png");
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 12;
+	-fx-highlight-fill: #55BDA6;
+	-fx-text-fill: #4A4A4A;
+	-fx-background-color :transparent;
+}
+.FramePane .text-field:focused{
+	-fx-background-image: url("Reg_TFEnabled.png");
+}
+
+.FramePane .button{
+	-fx-background-image: url("Set_FrameBt.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+
+#setRegLabel{
+	-fx-text-fill: #FE2851;
+}
+
+.setRealPane{
+	-fx-background-color: #ffffff;
+}
+
+.setRealPane .label{
+	-fx-font-family: "NanumBarunGothic";
+}
+
+
