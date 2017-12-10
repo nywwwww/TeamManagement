@@ -47,6 +47,7 @@
                <image>
                   <Image url="@../res/WarnIcon.png" />
                </image></ImageView>
+            <Button layoutX="266.0" layoutY="114.0" mnemonicParsing="false" onAction="#hRegCheckUsernameAction" text="확인" />
          </children>
       </Pane>
    </children>

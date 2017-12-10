@@ -69,6 +69,9 @@ public class NoTeamController {
 		
 		
 		// !!!! Todo: User테이블에 붙여주기 (LinkedTID)
-		// 새로고침	
+		// 새로고침
+		dto = dao.checkLeader(leaderuid);
+		int tid = dto.getTID();
+		dao.updateLinkedTID(leaderuid, tid);
 	}
 }

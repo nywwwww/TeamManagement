@@ -34,9 +34,21 @@
 	 	WHERE TID = #{TID}
  	</select>
  	
- 		<insert id="Team_insert" parameterType="member">
+ 	<select id="Team_selectLeader" parameterType="member" resultType="member">
+ 		SELECT TID, TeamName, Auth, Leader, Objective
+ 		FROM Team
+ 		WHERE Leader = #{Leader}
+ 	</select>
+ 	
+ 	<insert id="Team_insert" parameterType="member">
  		INSERT INTO Team (TeamName, Auth, Leader, Objective)
  		VALUES (#{TeamName}, #{Auth}, #{Leader}, #{Objective})
  	</insert>
+ 	
+ 	<update id="User_LinkedTID_update" parameterType= "member">
+ 		UPDATE User
+ 		SET LinkedTID = #{LinkedTID}
+ 		WHERE UID = #{UID}
+ 	</update>
  	
  </mapper>

@@ -32,6 +32,7 @@ public class SetController {
 		}else {
 			// 팀이 있고, 팀장이라면 팀장 관리 페이지로
 			// 팀이 있고, 멤버라면 팀 나가기 페이지로
+			
 		} 
 	}
 }

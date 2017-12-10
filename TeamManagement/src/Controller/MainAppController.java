@@ -199,6 +199,32 @@ public class MainAppController {
 		}
 	}
 	
+	// 게정명 확인 버튼(회원가입 화면)
+	@FXML
+	protected void hRegCheckUsernameAction(ActionEvent event) {
+		regLabel.setText(null);
+		regImg.setVisible(false);
+		boolean state = false;
+		String username = UserName.getText();
+		if(username.equals("")) {
+			regLabel.setText("사용자계정을 입력하세요");
+			regImg.setVisible(true);
+			return;
+		}
+		
+		MemberDAO dao = new MemberDAO();
+		MemberDTO dto = null;
+		state = dao.isExist(username);
+		if(state == true) {
+			regLabel.setText("이미 존재하는 계정입니다");
+			regImg.setVisible(true);
+		}
+		else {
+			regLabel.setText("사용가능한 계정입니다");
+			regImg.setVisible(true);
+		}
+	}
+	
 	// 계정명 확인 버튼(비밀번호변경 화면)
 	@FXML
 	protected void hChangeCheckUsernameAction(ActionEvent event) {

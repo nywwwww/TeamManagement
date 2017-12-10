@@ -94,6 +94,21 @@ public class MemberDAO {
 		return member;
 	}
 	
+	public MemberDTO checkLeader(int leader) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		MemberDTO member = new MemberDTO();
+		try {
+			member.setLeader(leader);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.Team_selectLeader", member);
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return member;
+	}
+	
 	public boolean isExist(String name) {
 		boolean result = false;
 		SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -139,6 +154,22 @@ public class MemberDAO {
 			sqlSession.update("org.mybatis.persistence.Membermanage.update", member);
 			sqlSession.commit();
 		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
+	
+	public void updateLinkedTID(int uid, int linkedTID) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setUID(uid);
+			member.setLinkedTID(linkedTID);
+			sqlSession.update("org.mybatis.persistence.Membermanage.User_LinkedTID_update", member);
+			sqlSession.commit();
+		}catch (Exception e) {
 			e.printStackTrace();
 			sqlSession.rollback();
 		} finally {
