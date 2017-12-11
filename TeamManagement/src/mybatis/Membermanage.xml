@@ -51,4 +51,16 @@
  		WHERE UID = #{UID}
  	</update>
  	
+ 	<select id="Invite_selectToUID" parameterType="member" resultType="member">
+	 	SELECT IID, FromUID, ToUID, LinkedTID
+	 	FROM Invite
+	 	WHERE ToUID = #{ToUID}
+ 	</select>
+ 	
+ 	 <select id="Invite_delete" parameterType="member" resultType="member">
+ 	 	DELETE FROM Invite
+ 	 	WHERE IID = #{IID}
+ 	</select>
+ 	
+ 
  </mapper>

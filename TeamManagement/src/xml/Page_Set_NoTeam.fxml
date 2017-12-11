@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -33,10 +36,13 @@
             <Label layoutX="14.0" layoutY="12.0" styleClass="FrameTitle" text="팀 만들기" />
             <Label layoutX="13.0" layoutY="42.0" styleClass="FrameSubtitle" text="새로운 팀을 만듭니다" />
             <TextField fx:id="TeamNameField" layoutX="21.0" layoutY="65.0" prefHeight="33.0" prefWidth="237.0" promptText="팀 이름을 입력하세요" />
-            <TextField fx:id="ObjectiveField" layoutX="21.0" layoutY="126.0" prefHeight="33.0" prefWidth="590.0" promptText="팀의 목표를 입력하세요 (100자)" />
+            <TextField fx:id="ObjectiveField" layoutX="21.0" layoutY="126.0" prefHeight="33.0" prefWidth="662.0" promptText="팀의 목표를 입력하세요 (100자)" />
             <TextField fx:id="LeaderField" disable="true" layoutX="21.0" layoutY="96.0" prefHeight="33.0" prefWidth="237.0" promptText="팀장 이름" />
             <Button layoutX="718.0" layoutY="199.0" mnemonicParsing="false" onAction="#hSetCreateButtonAction" prefHeight="28.0" prefWidth="193.0" text="만들기" />
             <Label fx:id="setRegLabel" layoutX="531.0" layoutY="203.0" textAlignment="RIGHT" />
+            <CheckBox fx:id="AuthCheckBox1" layoutX="22.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 업무를 추가할 수 있음" />
+            <CheckBox fx:id="AuthCheckBox2" layoutX="217.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 업무를 자율적으로 가져갈 수 있음" />
+            <CheckBox fx:id="AuthCheckBox3" layoutX="476.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 다른 유저를 초대할 수 있음" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="setInvitedTeamPane" layoutX="6.0" layoutY="508.0" prefHeight="236.0" prefWidth="919.0" styleClass="FramePane">
@@ -53,6 +59,14 @@
             </ImageView>
             <Label layoutX="13.0" layoutY="12.0" styleClass="FrameTitle" text="받은 초대" />
             <Label layoutX="12.0" layoutY="42.0" styleClass="FrameSubtitle" text="초대받은 팀이 여기에 표시됩니다" />
+            <TableView fx:id="InviteTableView" layoutX="1.0" layoutY="66.0" prefHeight="131.0" prefWidth="916.0">
+              <columns>
+                  <TableColumn fx:id="TeamColumn" prefWidth="750.0" text="C1" />
+                <TableColumn fx:id="FromColumn" prefWidth="120.0" text="C1" />
+              </columns>
+            </TableView>
+            <Button fx:id="inviteRefuseButton" layoutX="842.0" layoutY="201.0" mnemonicParsing="false" onAction="#hInviteRefuseButton" prefHeight="28.0" prefWidth="69.0" text="거절" />
+            <Button fx:id="inviteAcceptButton" layoutX="770.0" layoutY="201.0" mnemonicParsing="false" onAction="#hInviteAcceptButton" prefHeight="28.0" prefWidth="69.0" text="수락" />
          </children>
       </AnchorPane>
    </children>

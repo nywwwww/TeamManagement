@@ -92,4 +92,30 @@ public class MemberDTO {
 	public String setObjective(String Objective) {
 		return this.Objective = Objective;
 	}
+	
+	// Invite 테이블
+	int ToUID;
+	int FromUID;
+	int IID;
+	
+	public int getFromUID() {
+		return FromUID;
+	}
+	public int setFromUID(int FromUID) {
+		return this.FromUID = FromUID;
+	}
+	public int getToUID() {
+		return ToUID;
+	}
+	public int setToUID(int ToUID) {
+		return this.ToUID = ToUID;
+	}
+
+	public int getIID() {
+		return IID;
+	}
+	public int setIID(int IID) {
+		return this.IID = IID;
+	}
+	
 }

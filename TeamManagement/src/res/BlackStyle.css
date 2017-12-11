@@ -15,6 +15,92 @@
    -fx-padding: 0 0 0 0;
 }
 
+.table-view{
+    -fx-border-color:#E9E9E9;
+    -fx-border-width:1;
+    -fx-border-radius:2;
+    -fx-font-family: "NanumBarunGothic";
+}
+
+.table-view:focused{
+    -fx-background-color: transparent,-fx-box-border,-fx-control-inner-background;
+}
+
+.table-view .column-header {
+	visibility: hidden; -fx-padding: -1em;
+}
+
+.table-view .column-header-background{
+visibility: hidden; -fx-padding: -1em;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-color:transparent;
+}
+
+.table-view .filler{
+    -fx-opacity:0;
+}
+
+.table-view .table-row-cell {
+    -fx-cell-size: 29px;
+}
+.table-view .table-row-cell .text{
+    -fx-fill:#25292e;
+}
+.table-view .table-column{
+    -fx-border-color:transparent;
+    -fx-alignment:center_left;
+    -fx-padding: 0 0 0 15;
+}
+
+.table-view .table-column .label{
+    -fx-text-fill: #61718B;
+    -fx-font-weight:bold;
+    -fx-font-size:14px;
+    -fx-alignment:center_left;
+}
+
+.table-view .table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #EFF3F7;
+}
+
+.table-view .table-row-cell:selected {
+   -fx-background-color: #4089DF;
+}
+
+.table-view .table-row-cell:selected .text {
+    -fx-fill: white;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:horizontal{
+    -fx-padding:-12;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+    visibility: hidden;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical > .thumb,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .thumb
+{
+    visibility: true;
+    -fx-background-color:#B3B9BF;
+    -fx-background-radius: 15;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
 /* Sign In (로그인) 페이지-------------------------------------------- */
 
 .SignIn {
@@ -159,8 +245,30 @@
 	-fx-underline: false;
 }
 
+#inviteAcceptButton{
+	-fx-background-image: url("Set_FrameListBt1.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
+#inviteRefuseButton{
+	-fx-background-image: url("Set_FrameListBt2.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
 #setRegLabel{
 	-fx-text-fill: #FE2851;
+}
+
+#teamTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 52;
+}
+
+#objectiveTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 15;	
 }
 
 .setRealPane{
