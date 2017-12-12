@@ -66,7 +66,7 @@ visibility: hidden; -fx-padding: -1em;
 }
 
 .table-view .table-row-cell:selected {
-   -fx-background-color: #4089DF;
+   -fx-background-color: #55BDA6;
 }
 
 .table-view .table-row-cell:selected .text {
@@ -253,6 +253,13 @@ visibility: hidden; -fx-padding: -1em;
 
 #inviteRefuseButton{
 	-fx-background-image: url("Set_FrameListBt2.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
+
+#CompleteButton{
+	-fx-background-image: url("Set_FrameListBt1.png");	
 	-fx-text-fill: #f9f9f9;
 	-fx-underline: false;	
 }

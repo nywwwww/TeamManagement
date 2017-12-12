@@ -30,8 +30,9 @@ public class SetController {
 			realViewPane.getChildren().setAll(pane);
 			// 팀이 없을 경우 , 팀 만들기 / 초대 받기 페이지 (Page_Set_NoTeam) 으로 보냄.
 		}else {
-			// 팀이 있고, 팀장이라면 팀장 관리 페이지로
-			// 팀이 있고, 멤버라면 팀 나가기 페이지로
+			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set_TeamMember.fxml"));
+			realViewPane.getChildren().setAll(pane);
+			// 팀이 있을 경우, Page_Set_TeamMember 로 보냄.
 			
 		} 
 	}

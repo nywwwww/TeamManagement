@@ -149,21 +149,24 @@ public class NoTeamController {
 		
 		// 권한정보 설정 체크값으로 넘겨주기
 		int auth = 111;
+		/*
 		if(AuthCheckBox1.isSelected())
 			auth = auth + 100;
 		if(AuthCheckBox2.isSelected())
 			auth = auth + 10;
 		if(AuthCheckBox3.isSelected())
 			auth = auth + 1;
+		*/
 		
 		// INSERT
 		dao.insertTeam(teamname, auth, leaderuid, objective);
 		
 		
 		// User테이블에 붙여주기 (LinkedTID)
-		dto = dao.checkLeader(leaderuid);
+		dto = dao.Team_CheckTeamName(teamname);
 		int tid = dto.getTID();
-		dao.updateLinkedTID(leaderuid, tid);
+		System.out.println(s_uid+"|"+tid);
+		dao.updateLinkedTID(s_uid, tid);
 		
 		// 리디렉션
 		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set_TeamMember.fxml"));

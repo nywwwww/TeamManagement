@@ -118,4 +118,31 @@ public class MemberDTO {
 		return this.IID = IID;
 	}
 	
+	
+	// ToDo테이블
+
+	int AddUID;
+	int DoUID;
+	int IsEnd;
+
+	public int getAddUID() {
+		return AddUID;
+	}
+	public int setAddUID(int AddUID) {
+		return this.AddUID = AddUID;
+	}
+	public int getDoUID() {
+		return DoUID;
+	}
+	public int setDoUID(int DoUID) {
+		return this.DoUID = DoUID;
+	}
+
+	public int getIsEnd() {
+		return IsEnd;
+	}
+	public int setIsEnd(int IsEnd) {
+		return this.IsEnd = IsEnd;
+	}
+	
 }

@@ -40,6 +40,12 @@
  		WHERE Leader = #{Leader}
  	</select>
  	
+ 	 <select id="Team_selectTeamName" parameterType="member" resultType="member">
+ 		SELECT TID, TeamName, Auth, Leader, Objective
+ 		FROM Team
+ 		WHERE TeamName = #{TeamName}
+ 	</select>
+ 	
  	<insert id="Team_insert" parameterType="member">
  		INSERT INTO Team (TeamName, Auth, Leader, Objective)
  		VALUES (#{TeamName}, #{Auth}, #{Leader}, #{Objective})
@@ -61,6 +67,14 @@
  	 	DELETE FROM Invite
  	 	WHERE IID = #{IID}
  	</select>
+ 	<insert id="Invite_insert" parameterType="member">
+ 		INSERT INTO Invite (FromUID, ToUID, LinkedTID)
+ 		VALUES (#{FromUID}, #{ToUID}, #{LinkedTID})
+ 	</insert>
+ 	 	<insert id="Todo_insert" parameterType="member">
+ 		INSERT INTO Todo (Objective, AddUID, DoUID, IsEnd)
+ 		VALUES (#{Objective}, #{AddUID}, #{DoUID}, #{IsEnd})
+ 	</insert>
  	
  
  </mapper>
