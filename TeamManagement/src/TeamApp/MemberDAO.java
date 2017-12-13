@@ -110,7 +110,21 @@ public class MemberDAO {
 		}
 	}
 	
-	
+	public void updatePWD(String name, String PWD) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setUserName(name);
+			member.setPWD(PWD);
+			sqlSession.update("org.mybatis.persistence.Membermanage.update", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
 	
 	// Team 테이블
 	
@@ -164,6 +178,21 @@ public class MemberDAO {
 		return result;
 	}
 	
+	public MemberDTO checkLeader(int leader) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		MemberDTO member = new MemberDTO();
+		try {
+			member.setLeader(leader);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.Team_selectLeader", member);
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return member;
+	}
+	
 	public void Team_DeleteIID(int IID) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
@@ -177,6 +206,21 @@ public class MemberDAO {
 		} finally {
 			sqlSession.close();
 		}
+	}
+	
+	public MemberDTO Team_CheckTeamName(String TeamName) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		MemberDTO member = new MemberDTO();
+		try {
+			member.setTeamName(TeamName);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.Team_selectTeamName", member);
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return member;
 	}
 	
 	
@@ -215,53 +259,14 @@ public class MemberDAO {
 		return result;
 	}
 	
-	
-	
-	
-	// Todo 테이블
-	
-	
-	
-	
-	
-	
-
-	
-	public MemberDTO checkLeader(int leader) {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		MemberDTO member = new MemberDTO();
-		try {
-			member.setLeader(leader);
-			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.Team_selectLeader", member);
-		} catch (Exception e) {
-			e.printStackTrace();
-			sqlSession.rollback();
-		} finally {
-			sqlSession.close();
-		}
-		return member;
-	}
-
-
-	
-
-	
-	
-	
-
-	
-	
-
-	
-	
-	
-	public void updatePWD(String name, String PWD) {
+	public void Invite_insert(int FromUID, int ToUID, int LinkedTID) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
 			MemberDTO member = new MemberDTO();
-			member.setUserName(name);
-			member.setPWD(PWD);
-			sqlSession.update("org.mybatis.persistence.Membermanage.update", member);
+			member.setFromUID(FromUID);
+			member.setToUID(ToUID);
+			member.setLinkedTID(LinkedTID);
+			sqlSession.insert("org.mybatis.persistence.Membermanage.Invite_insert", member);
 			sqlSession.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -270,5 +275,28 @@ public class MemberDAO {
 			sqlSession.close();
 		}
 	}
+	
+	
+
+	
+	// Todo 테이블
+	
+	public void Todo_insert(String Objective, int AddUID, int DoUID, int IsEnd) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setObjective(Objective);
+			member.setAddUID(AddUID);
+			member.setDoUID(DoUID);
+			sqlSession.insert("org.mybatis.persistence.Membermanage.Todo_insert", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
+
 	
 }

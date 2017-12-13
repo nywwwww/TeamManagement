@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="realViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="930.0" styleClass="setRealPane" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Todo.ShareController">
+   <children>
+      <AnchorPane fx:id="setCreateTeamPane" layoutX="6.0" layoutY="4.0" prefHeight="78.0" prefWidth="919.0" styleClass="FramePane">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="919.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameHead.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="12.0" styleClass="FrameTitle" text="업무 추가" />
+            <Button layoutX="712.0" layoutY="43.0" mnemonicParsing="false" onAction="#hTodoCreateButtonAction" prefHeight="28.0" prefWidth="193.0" text="만들기" />
+            <TextField fx:id="TodoField" layoutX="11.0" layoutY="41.0" prefHeight="35.0" prefWidth="694.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="setInvitedTeamPane" layoutX="5.0" layoutY="93.0" prefHeight="678.0" prefWidth="919.0" styleClass="FramePane">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="919.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameHead.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="915.0" layoutX="2.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameSubtitle.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="13.0" layoutY="12.0" styleClass="FrameTitle" text="업무 나누기" />
+            <Label layoutX="12.0" layoutY="48.0" styleClass="FrameSubtitle" text="팀 전체 업무" />
+            <TableView fx:id="AllTableView" layoutX="1.0" layoutY="66.0" prefHeight="267.0" prefWidth="916.0">
+              <columns>
+                  <TableColumn fx:id="ObjectiveColumn" prefWidth="750.0" text="C1" />
+                <TableColumn fx:id="AddColumn" prefWidth="120.0" text="C1" />
+              </columns>
+            </TableView>
+            <Button fx:id="inviteRefuseButton" layoutX="468.0" layoutY="339.0" mnemonicParsing="false" onAction="#hTodoRefuseButton" prefHeight="28.0" prefWidth="69.0" text="UP" />
+            <Button fx:id="inviteAcceptButton" layoutX="396.0" layoutY="339.0" mnemonicParsing="false" onAction="#hTodoAcceptButton" prefHeight="28.0" prefWidth="69.0" text="DOWN" />
+            <TableView fx:id="MyTableView" layoutX="1.0" layoutY="395.0" prefHeight="267.0" prefWidth="916.0">
+               <columns>
+                  <TableColumn fx:id="ObjectiveColumn2" prefWidth="750.0" text="C1" />
+                  <TableColumn fx:id="AddColumn2" prefWidth="120.0" text="C1" />
+               </columns>
+            </TableView>
+            <ImageView fitHeight="24.0" fitWidth="915.0" layoutX="2.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameSubtitle.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="12.0" layoutY="378.0" styleClass="FrameSubtitle" text="나의 업무" />
+            <Button fx:id="CompleteButton" layoutX="846.0" layoutY="364.0" mnemonicParsing="false" onAction="#hTodoEndButton" prefHeight="28.0" prefWidth="69.0" text="완료" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

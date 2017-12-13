@@ -40,9 +40,9 @@
             <TextField fx:id="LeaderField" disable="true" layoutX="21.0" layoutY="96.0" prefHeight="33.0" prefWidth="237.0" promptText="팀장 이름" />
             <Button layoutX="718.0" layoutY="199.0" mnemonicParsing="false" onAction="#hSetCreateButtonAction" prefHeight="28.0" prefWidth="193.0" text="만들기" />
             <Label fx:id="setRegLabel" layoutX="531.0" layoutY="203.0" textAlignment="RIGHT" />
-            <CheckBox fx:id="AuthCheckBox1" layoutX="22.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 업무를 추가할 수 있음" />
-            <CheckBox fx:id="AuthCheckBox2" layoutX="217.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 업무를 자율적으로 가져갈 수 있음" />
-            <CheckBox fx:id="AuthCheckBox3" layoutX="476.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 다른 유저를 초대할 수 있음" />
+            <CheckBox fx:id="AuthCheckBox1" disable="true" layoutX="22.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 업무를 추가할 수 있음" />
+            <CheckBox fx:id="AuthCheckBox2" disable="true" layoutX="217.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 업무를 자율적으로 가져갈 수 있음" />
+            <CheckBox fx:id="AuthCheckBox3" disable="true" layoutX="476.0" layoutY="168.0" mnemonicParsing="false" text="멤버가 다른 유저를 초대할 수 있음" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="setInvitedTeamPane" layoutX="6.0" layoutY="508.0" prefHeight="236.0" prefWidth="919.0" styleClass="FramePane">

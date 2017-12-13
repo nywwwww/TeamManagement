@@ -20,8 +20,7 @@
                   </ImageView>
                   <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="팀 관리" />
                   <Button layoutX="-4.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="개인 관리" />
-                  <Button layoutX="-4.0" layoutY="154.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="오픈소스 라이센스" />
-                  <Button layoutX="-4.0" layoutY="192.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="프로그램 정보" />
+                  <Button layoutX="-4.0" layoutY="154.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="프로그램 정보" />
                </children>
             </AnchorPane>
             <ScrollPane prefHeight="200.0" prefWidth="200.0">

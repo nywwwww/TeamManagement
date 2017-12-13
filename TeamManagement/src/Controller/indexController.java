@@ -17,7 +17,6 @@ import javafx.scene.layout.AnchorPane;
 
 // 메인의 전체 레이아웃(index) 컨트롤러 클래스
 public class indexController {
-	
 	// 전체 레이아웃 initialize (초기화)
 	@FXML private Label TitleLabel;
 	@FXML private Label TeamLabel;
@@ -35,9 +34,9 @@ public class indexController {
 		int TID = dto.getLinkedTID();
 		state = dao.isExistTID(TID); // user테이블의 LinkedTID를 가져와서, Team테이블의 TID중 있는지 비교.
 		if(state == false) {
+			// 팀이 없을 경우 , 관리 페이지로 보냄s
 			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
 			viewPane.getChildren().setAll(pane);
-			// 팀이 없을 경우 , 관리 페이지로 보냄
 		}else {
 			// 팀이 있을 경우, 팀 정보 페이지
 		} 
@@ -45,21 +44,59 @@ public class indexController {
 	
 	// 메인 페이지 --------------------------------------------------------------------------------
 		// 사이드 메뉴 --------------------------------------------------------------------------------
+	
 		public void hMenuTeamButtonAction(MouseEvent event) throws IOException  {
+			
+			// 팀에 속해있는지 아닌지 검증하고, 아니면 Set으로 보내서 팀을 만들거나 초대를 받도록 처리함.
+			// 이부분 원래는 메소드로 분리하여 통합처리하는것이 맞지만, 시간이 부족하여 그냥 각 코드에 다 집어넣음 ㅠㅠ
+			boolean state = false;
+			MemberDAO dao = new MemberDAO();
+			MemberDTO dto = null;
+			dto = dao.checkUID(s_uid);
+			int TID = dto.getLinkedTID();
+			state = dao.isExistTID(TID); 
+			if(state == true) {
 			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Team.fxml"));
 			viewPane.getChildren().setAll(pane);
+			}else {
+			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
+			viewPane.getChildren().setAll(pane);	
+			}
 		}
 		public void hMenuComButtonAction(MouseEvent event) throws IOException  {
+			boolean state = false;
+			MemberDAO dao = new MemberDAO();
+			MemberDTO dto = null;
+			dto = dao.checkUID(s_uid);
+			int TID = dto.getLinkedTID();
+			state = dao.isExistTID(TID); 
+			if(state == true) {
 			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Com.fxml"));
 			viewPane.getChildren().setAll(pane);
+			}else {
+				AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
+				viewPane.getChildren().setAll(pane);	
+			}
 		}
 		public void hMenuTodoButtonAction(MouseEvent event) throws IOException  {
+			boolean state = false;
+			MemberDAO dao = new MemberDAO();
+			MemberDTO dto = null;
+			dto = dao.checkUID(s_uid);
+			int TID = dto.getLinkedTID();
+			state = dao.isExistTID(TID); 
+			if(state == true) {
 			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Todo.fxml"));
 			viewPane.getChildren().setAll(pane);
+			}else {
+				AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
+				viewPane.getChildren().setAll(pane);	
+			}
 		}
 		public void hMenuSetButtonAction(MouseEvent event) throws IOException  {
 			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
 			viewPane.getChildren().setAll(pane);
+
 		}
 }
 
