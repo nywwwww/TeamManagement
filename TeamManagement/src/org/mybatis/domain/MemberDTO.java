@@ -145,4 +145,39 @@ public class MemberDTO {
 		return this.IsEnd = IsEnd;
 	}
 	
+	// Contact테이블
+	
+	int CID;
+	int ConLinkedTID;
+	String ConName;
+	String ConNumber;
+	String ConMail;
+	
+	public int getCID() {
+		return CID;
+	}
+	
+	public void setConName(String ConName) {
+		this.ConName = ConName;
+	}
+	
+	public String getConName() {
+		return ConName;
+	}
+	
+	public void setConNumber(String ConNumber) {
+		this.ConNumber = ConNumber;
+	}
+	
+	public String getConNumber() {
+		return ConNumber;
+	}
+	
+	public void setConMail(String ConMail) {
+		this.ConMail = ConMail;
+	}
+	
+	public String getConMail() {
+		return ConMail;
+	}
 }

@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1195.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1195.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Com.ComController">
    <children>
       <SplitPane dividerPositions="0.19416666666666665" prefHeight="767.0" prefWidth="1202.0">
          <items>
@@ -19,13 +19,13 @@
                      </image>
                   </ImageView>
                   <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="소셜" />
-                  <Button layoutX="-4.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="연락처" />
+                  <Button fx:id="ContactButton" layoutX="-4.0" layoutY="116.0" mnemonicParsing="false" onAction="#hContactButtonAction" prefHeight="36.0" prefWidth="258.0" text="연락처" />
                   <Button layoutX="-4.0" layoutY="154.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="Github" />
                </children>
             </AnchorPane>
             <ScrollPane prefHeight="200.0" prefWidth="200.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="780.0" prefWidth="930.0" styleClass="realViewPane" stylesheets="@../res/BlackStyle.css" />
+                <AnchorPane fx:id="realViewPane" minHeight="0.0" minWidth="0.0" prefHeight="780.0" prefWidth="930.0" styleClass="realViewPane" stylesheets="@../res/BlackStyle.css" />
               </content>
             </ScrollPane>
          </items>

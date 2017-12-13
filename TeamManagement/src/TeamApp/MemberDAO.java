@@ -297,6 +297,71 @@ public class MemberDAO {
 			sqlSession.close();
 		}
 	}
-
 	
+	// Contact 테이블
+	
+	public void Contact_insert(String conName, String conNumber, String conMail, int TID) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setConName(conName);
+			member.setConNumber(conNumber);
+			member.setConMail(conMail);
+			member.setLinkedTID(TID);
+			sqlSession.insert("org.mybatis.persistence.Membermanage.Contact_insert", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
+	
+	public List<MemberDTO> Contact_CheckLinkedTID(int TID) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<MemberDTO> memberList = null;
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setLinkedTID(TID);
+			memberList = sqlSession.selectList("org.mybatis.persistence.Membermanage.Contact_selectLinkedTID", member);
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return memberList;
+	}
+	
+	public MemberDTO Contact_CheckConName(String ConName) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		MemberDTO member = new MemberDTO();
+		try {
+			member.setConName(ConName);
+			member = sqlSession.selectOne("org.mybatis.persistence.Membermanage.Contact_searchName", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return member;	
+	}
+	
+	public void Contact_Delete(String ConName) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		MemberDTO member = new MemberDTO();
+		try { 
+			member.setConName(ConName);
+			sqlSession.delete("org.mybatis.persistence.Membermanage.Contact_deleteAddr", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
 }
