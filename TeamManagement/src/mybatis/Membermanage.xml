@@ -74,10 +74,31 @@
  	</insert>
  	
  	<insert id="Todo_insert" parameterType="member">
- 		INSERT INTO Todo (Objective, AddUID, DoUID, IsEnd)
- 		VALUES (#{Objective}, #{AddUID}, #{DoUID}, #{IsEnd})
+ 		INSERT INTO Todo (Objective, AddUID, DoUID, IsEnd, LinkedTID)
+ 		VALUES (#{Objective}, #{AddUID}, #{DoUID}, #{IsEnd}, #{LinkedTID})
  	</insert>
-
+ 	 <select id="Todo_selectLinkedTID" parameterType="member" resultType="member">
+	 	SELECT DID, Objective, AddUID, DoUID, IsEnd, LinkedTID
+	 	FROM Todo
+	 	WHERE LinkedTID = #{LinkedTID}
+ 	</select>
+ 	
+  	<update id="Todo_update_DoUID" parameterType="member">
+ 		UPDATE Todo
+ 		SET DoUID = #{DoUID}
+ 		WHERE DID = #{DID}
+ 	</update>	
+ 	
+  	<update id="Todo_update_IsEnd" parameterType="member">
+ 		UPDATE Todo
+ 		SET IsEnd = #{IsEnd}
+ 		WHERE DID = #{DID}
+ 	</update>	
+ 	
+ 	 <select id="Todo_delete" parameterType="member" resultType="member">
+ 	 	DELETE FROM Todo
+ 	 	WHERE DID = #{DID}
+ 	</select>
 	<insert id="Contact_insert" parameterType="member">
 		INSERT INTO Contact (ConName, ConNumber, ConMail, LinkedTID)
 		VALUES (#{ConName}, #{ConNumber}, #{ConMail}, #{LinkedTID})
@@ -99,5 +120,16 @@
  		DELETE from Contact
  		WHERE ConName = #{ConName}
  	</delete>
+ 	
+ 	<select id="Social_selectLinkedTID" parameterType="member" resultType="member">
+	 	SELECT SID, Contents, FromUID, LinkedTID
+	 	FROM Social
+	 	WHERE LinkedTID = #{LinkedTID}
+ 	</select>
+ 	<insert id="Social_insert" parameterType="member">
+		INSERT INTO Social (Contents, FromUID, LinkedTID)
+		VALUES (#{Contents}, #{FromUID}, #{LinkedTID})
+	</insert>
+ 	
  
  </mapper>

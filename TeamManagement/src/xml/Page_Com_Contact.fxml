@@ -119,7 +119,7 @@
                   <Image url="@../res/Set_FrameList.png" />
                </image>
             </ImageView>
-            <Button layoutX="835.0" layoutY="194.0" mnemonicParsing="false" onAction="#hDeleteContactAddres" prefHeight="28.0" prefWidth="69.0" text="삭제" />
+            <Button fx:id="DeleteButton" layoutX="842.0" layoutY="194.0" mnemonicParsing="false" onAction="#hDeleteContactAddres" prefHeight="28.0" prefWidth="69.0" text="삭제" />
             <ImageView fitHeight="36.0" fitWidth="878.0" layoutX="14.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../res/Set_FrameList.png" />
@@ -130,19 +130,19 @@
             <Label fx:id="outMail" layoutX="25.0" layoutY="142.0" prefHeight="36.0" prefWidth="403.0" />
          </children>
       </AnchorPane>
-      <Label fx:id="label2" alignment="CENTER" layoutX="188.0" layoutY="56.0" onMouseClicked="#hContactMouseAction2" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label1" alignment="CENTER" layoutX="66.0" layoutY="56.0" onMouseClicked="#hContactMouseAction1" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label3" alignment="CENTER" layoutX="309.0" layoutY="56.0" onMouseClicked="#hContactMouseAction3" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label4" alignment="CENTER" layoutX="431.0" layoutY="56.0" onMouseClicked="#hContactMouseAction4" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label5" alignment="CENTER" layoutX="551.0" layoutY="56.0" onMouseClicked="#hContactMouseAction5" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label6" alignment="CENTER" layoutX="673.0" layoutY="56.0" onMouseClicked="#hContactMouseAction6" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label7" alignment="CENTER" layoutX="796.0" layoutY="56.0" onMouseClicked="#hContactMouseAction7" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label8" alignment="CENTER" layoutX="66.0" layoutY="177.0" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label9" alignment="CENTER" layoutX="187.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label10" alignment="CENTER" layoutX="308.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label11" alignment="CENTER" layoutX="430.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label12" alignment="CENTER" layoutX="552.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label13" alignment="CENTER" layoutX="674.0" layoutY="178.0" prefHeight="33.0" prefWidth="69.0" />
-      <Label fx:id="label14" alignment="CENTER" layoutX="795.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" />
+      <Label fx:id="label2" alignment="CENTER" layoutX="165.0" layoutY="15.0" onMouseClicked="#hContactMouseAction2" prefHeight="115.0" prefWidth="114.0" styleClass="ContactLabel" />
+      <Label fx:id="label1" alignment="CENTER" layoutX="43.0" layoutY="15.0" onMouseClicked="#hContactMouseAction1" prefHeight="115.0" prefWidth="114.0" styleClass="ContactLabel" />
+      <Label fx:id="label3" alignment="CENTER" layoutX="286.0" layoutY="15.0" onMouseClicked="#hContactMouseAction3" prefHeight="115.0" prefWidth="115.0" styleClass="ContactLabel" />
+      <Label fx:id="label4" alignment="CENTER" layoutX="408.0" layoutY="15.0" onMouseClicked="#hContactMouseAction4" prefHeight="115.0" prefWidth="114.0" styleClass="ContactLabel" />
+      <Label fx:id="label5" alignment="CENTER" layoutX="529.0" layoutY="15.0" onMouseClicked="#hContactMouseAction5" prefHeight="115.0" prefWidth="114.0" styleClass="ContactLabel" />
+      <Label fx:id="label6" alignment="CENTER" layoutX="673.0" layoutY="56.0" onMouseClicked="#hContactMouseAction6" prefHeight="33.0" prefWidth="69.0" styleClass="ContactLabel" />
+      <Label fx:id="label7" alignment="CENTER" layoutX="796.0" layoutY="56.0" onMouseClicked="#hContactMouseAction7" prefHeight="33.0" prefWidth="69.0" styleClass="ContactLabel" />
+      <Label fx:id="label8" alignment="CENTER" layoutX="43.0" layoutY="137.0" prefHeight="115.0" prefWidth="114.0" styleClass="ContactLabel" />
+      <Label fx:id="label9" alignment="CENTER" layoutX="165.0" layoutY="137.0" prefHeight="115.0" prefWidth="115.0" styleClass="ContactLabel" />
+      <Label fx:id="label10" alignment="CENTER" layoutX="308.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" styleClass="ContactLabel" />
+      <Label fx:id="label11" alignment="CENTER" layoutX="430.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" styleClass="ContactLabel" />
+      <Label fx:id="label12" alignment="CENTER" layoutX="552.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" styleClass="ContactLabel" />
+      <Label fx:id="label13" alignment="CENTER" layoutX="674.0" layoutY="178.0" prefHeight="33.0" prefWidth="69.0" styleClass="ContactLabel" />
+      <Label fx:id="label14" alignment="CENTER" layoutX="795.0" layoutY="180.0" prefHeight="33.0" prefWidth="69.0" styleClass="ContactLabel" />
    </children>
 </AnchorPane>

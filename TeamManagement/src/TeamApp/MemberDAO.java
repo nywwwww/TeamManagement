@@ -280,15 +280,114 @@ public class MemberDAO {
 
 	
 	// Todo 테이블
-	
-	public void Todo_insert(String Objective, int AddUID, int DoUID, int IsEnd) {
+
+	public void Todo_insert(String Objective, int AddUID, int DoUID, int IsEnd, int LinkedTID) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
 			MemberDTO member = new MemberDTO();
 			member.setObjective(Objective);
 			member.setAddUID(AddUID);
 			member.setDoUID(DoUID);
+			member.setLinkedTID(LinkedTID);
 			sqlSession.insert("org.mybatis.persistence.Membermanage.Todo_insert", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
+
+	public List<MemberDTO> Todo_checkLinkedTID(int LinkedTID) {	
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<MemberDTO> member = null;
+		MemberDTO input = new MemberDTO();
+		try {
+			input.setLinkedTID(LinkedTID);
+			member = sqlSession.selectList("org.mybatis.persistence.Membermanage.Todo_selectLinkedTID", input);
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return member;
+	}
+	
+	public void Todo_updateDoUID(int DID, int DoUID) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setDID(DID);
+			member.setDoUID(DoUID);
+			sqlSession.update("org.mybatis.persistence.Membermanage.Todo_update_DoUID", member);
+			sqlSession.commit();
+		}catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
+	
+	public void Todo_delete(int DID) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setDID(DID);
+			sqlSession.insert("org.mybatis.persistence.Membermanage.Todo_delete", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
+	
+	public void Todo_updateIsEnd(int DID, int IsEnd) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setDID(DID);
+			member.setIsEnd(IsEnd);
+			sqlSession.update("org.mybatis.persistence.Membermanage.Todo_update_IsEnd", member);
+			sqlSession.commit();
+		}catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
+	
+	// Social 테이블
+	
+	public List<MemberDTO> Social_checkLinkedTID(int LinkedTID) {	
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<MemberDTO> member = null;
+		MemberDTO input = new MemberDTO();
+		try {
+			input.setLinkedTID(LinkedTID);
+			member = sqlSession.selectList("org.mybatis.persistence.Membermanage.Social_selectLinkedTID", input);
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+		return member;
+	}
+	
+	public void Social_insert(String Contents, int FromUID, int LinkedTID) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			MemberDTO member = new MemberDTO();
+			member.setContents(Contents);
+			member.setFromUID(FromUID);
+			member.setLinkedTID(LinkedTID);
+			sqlSession.insert("org.mybatis.persistence.Membermanage.Social_insert", member);
 			sqlSession.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

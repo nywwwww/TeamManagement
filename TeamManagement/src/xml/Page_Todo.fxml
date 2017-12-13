@@ -18,7 +18,8 @@
                         <Image url="@../res/SubMenu_titleTodo.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="업무 나누기" />
+                  <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" onAction="#hMenuButton1" prefHeight="36.0" prefWidth="258.0" text="업무 나누기" />
+                  <Button layoutX="-3.0" layoutY="116.0" mnemonicParsing="false" onAction="#hMenuButton2" prefHeight="36.0" prefWidth="258.0" text="업무 전체보기" />
                </children>
             </AnchorPane>
             <ScrollPane prefHeight="200.0" prefWidth="200.0">

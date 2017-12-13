@@ -26,12 +26,18 @@ import javafx.stage.Stage;
 public class ComController {
 	@FXML private Button ContactButton;
 	@FXML private AnchorPane realViewPane;
-	
-	
+	@FXML protected void initialize() throws IOException{
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Com_Sns.fxml"));
+		realViewPane.getChildren().setAll(pane);		
+	}
+	@FXML protected void hSnsButtonAction(ActionEvent event) throws IOException {
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Com_Sns.fxml"));
+		realViewPane.getChildren().setAll(pane);
+	}
 	@FXML protected void hContactButtonAction(ActionEvent event) throws IOException {
 		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Com_Contact.fxml"));
 		realViewPane.getChildren().setAll(pane);
 
 	}
-	
+
 }

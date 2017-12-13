@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="realViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="930.0" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Com.SnsController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="2.0" prefHeight="764.0" prefWidth="919.0" styleClass="FramePane">
+         <children>
+            <TableView fx:id="SnsTableView" layoutX="1.0" layoutY="106.0" prefHeight="680.0" prefWidth="916.0" styleClass="snsTable">
+              <columns>
+                  <TableColumn fx:id="ContentsColumn" prefWidth="800.0" text="C1" />
+                <TableColumn fx:id="FromColumn" prefWidth="100.0" text="C1" />
+              </columns>
+            </TableView>
+            <Button fx:id="CompleteButton" layoutX="840.0" layoutY="40.0" mnemonicParsing="false" onAction="#hSnsAddButton" prefHeight="28.0" prefWidth="69.0" text="보내기" />
+            <ImageView fitHeight="102.0" fitWidth="155.0" layoutX="9.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_NT_bg.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="inputField" layoutX="152.0" layoutY="37.0" prefHeight="35.0" prefWidth="678.0" promptText="150자 내에서 원하는 메시지를 입력하세요." />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

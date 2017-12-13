@@ -30,34 +30,35 @@
                   <Image url="@../res/Set_FrameHead.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="24.0" fitWidth="915.0" layoutX="2.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="24.0" fitWidth="915.0" layoutX="2.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../res/Set_FrameSubtitle.png" />
                </image>
             </ImageView>
             <Label layoutX="13.0" layoutY="12.0" styleClass="FrameTitle" text="업무 나누기" />
-            <Label layoutX="12.0" layoutY="48.0" styleClass="FrameSubtitle" text="팀 전체 업무" />
-            <TableView fx:id="AllTableView" layoutX="1.0" layoutY="66.0" prefHeight="267.0" prefWidth="916.0">
+            <Label layoutX="12.0" layoutY="58.0" styleClass="FrameSubtitle" text="팀 전체 업무" />
+            <TableView fx:id="AllTableView" layoutX="1.0" layoutY="76.0" prefHeight="267.0" prefWidth="916.0">
               <columns>
                   <TableColumn fx:id="ObjectiveColumn" prefWidth="750.0" text="C1" />
                 <TableColumn fx:id="AddColumn" prefWidth="120.0" text="C1" />
               </columns>
             </TableView>
-            <Button fx:id="inviteRefuseButton" layoutX="468.0" layoutY="339.0" mnemonicParsing="false" onAction="#hTodoRefuseButton" prefHeight="28.0" prefWidth="69.0" text="UP" />
-            <Button fx:id="inviteAcceptButton" layoutX="396.0" layoutY="339.0" mnemonicParsing="false" onAction="#hTodoAcceptButton" prefHeight="28.0" prefWidth="69.0" text="DOWN" />
-            <TableView fx:id="MyTableView" layoutX="1.0" layoutY="395.0" prefHeight="267.0" prefWidth="916.0">
+            <Button fx:id="TodoUp" layoutX="408.0" layoutY="349.0" mnemonicParsing="false" onAction="#hTodoRefuseButton" prefHeight="28.0" prefWidth="69.0" />
+            <Button fx:id="TodoDown" layoutX="480.0" layoutY="349.0" mnemonicParsing="false" onAction="#hTodoAcceptButton" prefHeight="28.0" prefWidth="69.0" text="DOWN" />
+            <TableView fx:id="MyTableView" layoutX="1.0" layoutY="405.0" prefHeight="267.0" prefWidth="916.0">
                <columns>
                   <TableColumn fx:id="ObjectiveColumn2" prefWidth="750.0" text="C1" />
                   <TableColumn fx:id="AddColumn2" prefWidth="120.0" text="C1" />
                </columns>
             </TableView>
-            <ImageView fitHeight="24.0" fitWidth="915.0" layoutX="2.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="24.0" fitWidth="915.0" layoutX="2.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../res/Set_FrameSubtitle.png" />
                </image>
             </ImageView>
-            <Label layoutX="12.0" layoutY="378.0" styleClass="FrameSubtitle" text="나의 업무" />
-            <Button fx:id="CompleteButton" layoutX="846.0" layoutY="364.0" mnemonicParsing="false" onAction="#hTodoEndButton" prefHeight="28.0" prefWidth="69.0" text="완료" />
+            <Label layoutX="12.0" layoutY="388.0" styleClass="FrameSubtitle" text="나의 업무" />
+            <Button fx:id="CompleteButton" layoutX="846.0" layoutY="374.0" mnemonicParsing="false" onAction="#hTodoEndButton" prefHeight="28.0" prefWidth="69.0" text="완료" />
+            <Button fx:id="DeleteButton" layoutX="846.0" layoutY="44.0" mnemonicParsing="false" onAction="#hTodoDeleteButton" prefHeight="28.0" prefWidth="69.0" text="삭제" />
          </children>
       </AnchorPane>
    </children>

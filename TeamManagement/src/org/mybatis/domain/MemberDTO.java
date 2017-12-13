@@ -145,6 +145,31 @@ public class MemberDTO {
 		return this.IsEnd = IsEnd;
 	}
 	
+	int DID;
+	public int getDID() {
+		return DID;
+	}
+	public int setDID(int DID) {
+		return this.DID = DID;
+	}
+	
+	// Social 테이블
+	int SID;
+	String Contents;
+	
+	public int getSID() {
+		return SID;
+	}
+	public int setSID(int SID) {
+		return this.SID = SID;
+	}
+	public String getContents() {
+		return Contents;
+	}
+	public String setContents(String Contents) {
+		return this.Contents = Contents;
+	}
+	
 	// Contact테이블
 	
 	int CID;
