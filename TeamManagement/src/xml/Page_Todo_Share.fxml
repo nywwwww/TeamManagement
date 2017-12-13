@@ -43,11 +43,11 @@
                 <TableColumn fx:id="AddColumn" prefWidth="120.0" text="C1" />
               </columns>
             </TableView>
-            <Button fx:id="TodoUp" layoutX="408.0" layoutY="349.0" mnemonicParsing="false" onAction="#hTodoRefuseButton" prefHeight="28.0" prefWidth="69.0" />
-            <Button fx:id="TodoDown" layoutX="480.0" layoutY="349.0" mnemonicParsing="false" onAction="#hTodoAcceptButton" prefHeight="28.0" prefWidth="69.0" text="DOWN" />
+            <Button fx:id="TodoUp" layoutX="227.0" layoutY="349.0" mnemonicParsing="false" onAction="#hTodoRefuseButton" prefHeight="28.0" prefWidth="250.0" />
+            <Button fx:id="TodoDown" layoutX="480.0" layoutY="349.0" mnemonicParsing="false" onAction="#hTodoAcceptButton" prefHeight="28.0" prefWidth="250.0" />
             <TableView fx:id="MyTableView" layoutX="1.0" layoutY="405.0" prefHeight="267.0" prefWidth="916.0">
                <columns>
-                  <TableColumn fx:id="ObjectiveColumn2" prefWidth="750.0" text="C1" />
+                  <TableColumn fx:id="ObjectiveColumn2" prefWidth="751.0" text="C1" />
                   <TableColumn fx:id="AddColumn2" prefWidth="120.0" text="C1" />
                </columns>
             </TableView>
