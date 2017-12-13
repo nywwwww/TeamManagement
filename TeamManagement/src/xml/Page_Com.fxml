@@ -18,9 +18,8 @@
                         <Image url="@../res/SubMenu_titleCom.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="소셜" />
+                  <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" onAction="#hSnsButtonAction" prefHeight="36.0" prefWidth="258.0" text="소셜" />
                   <Button fx:id="ContactButton" layoutX="-4.0" layoutY="116.0" mnemonicParsing="false" onAction="#hContactButtonAction" prefHeight="36.0" prefWidth="258.0" text="연락처" />
-                  <Button layoutX="-4.0" layoutY="154.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="Github" />
                </children>
             </AnchorPane>
             <ScrollPane prefHeight="200.0" prefWidth="200.0">

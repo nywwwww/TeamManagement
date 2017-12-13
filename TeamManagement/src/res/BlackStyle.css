@@ -287,3 +287,81 @@ visibility: hidden; -fx-padding: -1em;
 }
 
 
+/* Todo 업무 페이지 -------------------------------------------- */
+
+#DeleteButton{
+	-fx-background-image: url("Set_FrameListBt2.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
+#AllTableView .table-row-cell:selected {
+   -fx-background-color: #808080;
+}
+
+#MyTableView .table-row-cell:selected {
+   -fx-background-color: #808080;
+}
+
+#AllTablePane{
+	-fx-background-image: url("GreyBox.png");	
+	-fx-background-color: #808080;	
+}
+.TodoAllPane{
+	-fx-background-image: url("GreyBox.png");
+}
+.TableLabel{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 12s;	
+}
+
+#TodoDown{
+	-fx-background-image: url("Todo_DownBt.png");	
+	
+}
+#TodoUp{
+	-fx-background-image: url("Todo_UpBt.png");	
+	
+}
+
+/* Com 커뮤니케이션 페이지 -------------------------------------------- */
+
+.ContactLabel{
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 20;		
+}
+
+/* Team 팀 정보 페이지 -------------------------------------------- */
+
+.infoLabel{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 92;	
+}
+.infoLabel2{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 70;	
+}
+.DateYear{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 50;	
+}
+.DateDay{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 25;	
+}
+
+.snsTable .table-row-cell:filled:selected { 
+  -fx-background: -fx-control-inner-background ;
+  -fx-background-color: -fx-table-cell-border-color, -fx-background ;
+  -fx-background-insets: 0, 0 0 1 0 ;
+  -fx-table-cell-border-color: derive(-fx-color, 5%);
+}
+.snsTable .table-row-cell:odd:filled:selected {
+  -fx-background: -fx-control-inner-background-alt ;
+}
+
+
+.snsTable .table-row-cell {
+    -fx-cell-size: 100px;
+}

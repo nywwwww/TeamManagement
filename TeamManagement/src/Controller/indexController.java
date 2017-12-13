@@ -38,6 +38,8 @@ public class indexController {
 			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
 			viewPane.getChildren().setAll(pane);
 		}else {
+			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Team.fxml"));
+			viewPane.getChildren().setAll(pane);
 			// 팀이 있을 경우, 팀 정보 페이지
 		} 
 	}

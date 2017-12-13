@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="realViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="930.0" styleClass="TodoAllPane" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Todo.AllController">
+   <children>
+      <AnchorPane fx:id="AllTablePane" layoutX="5.0" layoutY="2.0" prefHeight="764.0" prefWidth="919.0" styleClass="FramePane">
+         <children>
+            <Label layoutX="61.0" layoutY="26.0" styleClass="FrameTitle" text="전체 업무 보기" />
+            <TableView fx:id="TeamAllTableView" layoutX="1.0" layoutY="106.0" prefHeight="680.0" prefWidth="916.0" styleClass="TitleTable">
+              <columns>
+                  <TableColumn fx:id="ObjectiveColumn" prefWidth="600.0" text="C1" />
+                <TableColumn fx:id="AddColumn" prefWidth="100.0" text="C1" />
+                  <TableColumn fx:id="DoColumn" prefWidth="100.0" text="C1" />
+                  <TableColumn fx:id="IsEndColumn" prefWidth="100.0" text="C1" />
+              </columns>
+            </TableView>
+            <Button fx:id="DeleteButton" layoutX="846.0" layoutY="39.0" mnemonicParsing="false" onAction="#hTodoDeleteButton" prefHeight="28.0" prefWidth="69.0" text="삭제" />
+            <ImageView fitHeight="37.0" fitWidth="919.0" layoutX="2.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/Set_FrameHead.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="13.0" layoutY="83.0" styleClass="TableLabel" text="업무내용" />
+            <Label layoutX="633.0" layoutY="83.0" styleClass="TableLabel" text="지시자" />
+            <Label layoutX="733.0" layoutY="83.0" styleClass="TableLabel" text="수행자" />
+            <Label layoutX="823.0" layoutY="83.0" styleClass="TableLabel" text="진행상황" />
+            <ImageView fitHeight="28.0" fitWidth="23.0" layoutX="26.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/ind_menuIconTodo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
