@@ -18,14 +18,14 @@
                         <Image url="@../res/SubMenu_titleSet.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="팀 관리" />
-                  <Button layoutX="-4.0" layoutY="154.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="프로그램 정보" />
-                  <Button layoutX="-4.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" text="개인 관리" />
+                  <Button layoutX="-3.0" layoutY="78.0" mnemonicParsing="false" onAction="#hSetSubMenuButton1" prefHeight="36.0" prefWidth="258.0" text="팀 관리" />
+                  <Button layoutX="-4.0" layoutY="154.0" mnemonicParsing="false" onAction="#hSetSubMenuButton3" prefHeight="36.0" prefWidth="258.0" text="프로그램 정보" />
+                  <Button layoutX="-4.0" layoutY="116.0" mnemonicParsing="false" onAction="#hSetSubMenuButton2" prefHeight="36.0" prefWidth="258.0" text="개인 관리" />
                </children>
             </AnchorPane>
             <ScrollPane prefHeight="200.0" prefWidth="200.0">
               <content>
-                <AnchorPane fx:id="realViewPane" minHeight="0.0" minWidth="0.0" prefHeight="780.0" prefWidth="930.0" styleClass="realViewPane" stylesheets="@../res/BlackStyle.css" />
+                <AnchorPane fx:id="realViewPane" minHeight="0.0" minWidth="0.0" prefHeight="954.0" prefWidth="939.0" styleClass="realViewPane" stylesheets="@../res/BlackStyle.css" />
               </content>
             </ScrollPane>
          </items>

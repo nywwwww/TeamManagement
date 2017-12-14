@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="realViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="930.0" styleClass="setRealPane" stylesheets="@../res/BlackStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="1320.0" fitWidth="942.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/ProgramInfo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="730.0" styleClass="OSSTitle" text="JavaFX" textFill="WHITE" />
+      <Label layoutX="61.0" layoutY="762.0" styleClass="OSSContent" text="http://www.oracle.com/technetwork/java/javase/terms/license/index.html" textFill="WHITE" />
+      <Label layoutX="61.0" layoutY="751.0" styleClass="OSSContent" text="Copyright ORACLE AMERICA, INC." textFill="WHITE" />
+      <Label layoutX="61.0" layoutY="790.0" styleClass="OSSTitle" text="MyBatis" textFill="WHITE" />
+      <Label layoutX="61.0" layoutY="822.0" styleClass="OSSContent" text="http://www.mybatis.org/mybatis-3/license.html" textFill="WHITE" />
+      <Label layoutX="61.0" layoutY="811.0" styleClass="OSSContent" text="Copyright ORACLE AMERICA, INC." textFill="WHITE" />
+   </children>
+</AnchorPane>

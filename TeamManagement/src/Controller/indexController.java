@@ -30,6 +30,17 @@ public class indexController {
 		dto = dao.checkUID(s_uid);
 		TitleLabel.setText("안녕하세요, "+dto.getRealName()+"님!");
 		
+		
+		// 팀 정보 표시하기
+
+		// 자신의 TID가져오기
+		dto = dao.checkUID(s_uid);
+		int myTID = dto.getLinkedTID();
+		dto = dao.checkTID(myTID);
+
+		TeamLabel.setText("현재 참여중인 팀 : "+dto.getTeamName());
+		
+		dto = dao.checkUID(s_uid);
 		// 시작페이지 결정
 		int TID = dto.getLinkedTID();
 		state = dao.isExistTID(TID); // user테이블의 LinkedTID를 가져와서, Team테이블의 TID중 있는지 비교.
