@@ -101,6 +101,35 @@ visibility: hidden; -fx-padding: -1em;
     -fx-opacity: 0;
 }
 
+.scroll-pane > .virtual-flow > .scroll-bar > .increment-button,
+.scroll-pane > .virtual-flow > .scroll-bar > .decrement-button{
+	-fx-opacity: 0;
+} 
+
+.scroll-pane > .scroll-bar:vertical > .thumb,
+.scroll-pane > .scroll-bar:horizontal > .thumb
+{
+    visibility: true;
+    -fx-background-color:#B3B9BF;
+    -fx-background-radius: 15;
+}
+
+.scroll-pane > .scroll-bar:vertical,
+.scroll-pane > .scroll-bar:vertical > .track,
+.scroll-pane > .scroll-bar:vertical > .track-background,
+.scroll-pane > .scroll-bar:horizontal,
+.scroll-pane > .scroll-bar:horizontal > .track,
+.scroll-pane > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+    visibility: hidden;
+}
+
+.scroll-pane > .scroll-bar:vertical,
+.scroll-pane > .scroll-bar:horizontal{
+    -fx-padding:-2;
+}
+
+
 /* Sign In (로그인) 페이지-------------------------------------------- */
 
 .SignIn {
@@ -350,6 +379,23 @@ visibility: hidden; -fx-padding: -1em;
 	-fx-font-family: "NanumBarunGothic";
 	-fx-font-size: 25;	
 }
+.snsTable{
+	-fx-font-size:12;
+}
+
+
+.SubTodoTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-background-image: url("Set_FrameHead.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+.SubSnsTitle{	
+	-fx-font-family: "NanumBarunGothic";
+	-fx-background-image: url("Set_FrameHead.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
 
 .snsTable .table-row-cell:filled:selected { 
   -fx-background: -fx-control-inner-background ;
@@ -361,7 +407,21 @@ visibility: hidden; -fx-padding: -1em;
   -fx-background: -fx-control-inner-background-alt ;
 }
 
-
 .snsTable .table-row-cell {
     -fx-cell-size: 100px;
+}
+
+.snsTable .table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #FFFFFF;
+}
+
+.OSSTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 18;	
+}
+.OSSContent{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 10;	
 }
