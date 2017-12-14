@@ -463,4 +463,23 @@ public class MemberDAO {
 			sqlSession.close();
 		}
 	}
+	
+	public void Info_Update(int UID, String InfoName, String PWD, String Question, String Answer) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		MemberDTO member = new MemberDTO();
+		try {
+			member.setUID(UID);
+			member.setRealName(InfoName);
+			member.setPWD(PWD);
+			member.setQuestion(Question);
+			member.setAnswer(Answer);
+			sqlSession.update("org.mybatis.persistence.Membermanage.Info_update", member);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			sqlSession.rollback();
+		} finally {
+			sqlSession.close();
+		}
+	}
 }

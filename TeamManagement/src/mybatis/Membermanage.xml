@@ -130,6 +130,12 @@
 		INSERT INTO Social (Contents, FromUID, LinkedTID)
 		VALUES (#{Contents}, #{FromUID}, #{LinkedTID})
 	</insert>
+	
+	<update id="Info_update" parameterType="member">
+ 		UPDATE User
+ 		SET RealName = #{RealName}, PWD = #{PWD}, Question = #{Question}, Answer = #{Answer}
+ 		WHERE UID = #{UID}
+ 	</update>
  	
  
  </mapper>

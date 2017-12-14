@@ -43,10 +43,13 @@ public class SetController {
 	}
 	//개인관리 버튼
 	@FXML protected void hSetSubMenuButton2(ActionEvent event) throws IOException {
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set_Info.fxml"));
+		realViewPane.getChildren().setAll(pane);
 	}
 	//프로그램 정보 버튼
 	@FXML protected void hSetSubMenuButton3(ActionEvent event) throws IOException {
 		AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set_OSSN.fxml"));
 		realViewPane.getChildren().setAll(pane);	
 	}
+	
 }

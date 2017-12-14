@@ -30,7 +30,7 @@ public class indexController {
 		dto = dao.checkUID(s_uid);
 		TitleLabel.setText("안녕하세요, "+dto.getRealName()+"님!");
 		
-		
+		/*
 		// 팀 정보 표시하기
 
 		// 자신의 TID가져오기
@@ -39,6 +39,7 @@ public class indexController {
 		dto = dao.checkTID(myTID);
 
 		TeamLabel.setText("현재 참여중인 팀 : "+dto.getTeamName());
+		*/
 		
 		dto = dao.checkUID(s_uid);
 		// 시작페이지 결정
@@ -49,6 +50,14 @@ public class indexController {
 			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Set.fxml"));
 			viewPane.getChildren().setAll(pane);
 		}else {
+			// 팀 정보 표시하기
+
+			// 자신의 TID가져오기
+			dto = dao.checkUID(s_uid);
+			int myTID = dto.getLinkedTID();
+			dto = dao.checkTID(myTID);
+
+			TeamLabel.setText("현재 참여중인 팀 : "+dto.getTeamName());
 			AnchorPane pane = FXMLLoader.load(getClass().getResource("/xml/Page_Team.fxml"));
 			viewPane.getChildren().setAll(pane);
 			// 팀이 있을 경우, 팀 정보 페이지

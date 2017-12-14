@@ -1,5 +1,6 @@
 package Controller;
 
+import java.util.prefs.*;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -41,6 +43,7 @@ public class MainAppController {
 	@FXML private PasswordField LoginPWD;
 	@FXML private Label signLabel;
 	@FXML private ImageView signImg;
+	@FXML private CheckBox chkbox;
 	
 	//회원가입 라벨정보
 	@FXML private TextField UserName;
@@ -61,7 +64,21 @@ public class MainAppController {
 	@FXML private ImageView changeImg;
 	
 	//Image image = new Image("file:res/Warnlcon.png");
-
+	
+	
+	@FXML protected void initialize() throws IOException {
+		
+		Preferences prefs = Preferences.userNodeForPackage(Controller.MainAppController.class);
+		
+		String temp = prefs.get("temp", "");
+		
+		if(temp.equals(""))
+			return;
+		
+		LoginId.setText(temp);
+		chkbox.setSelected(true);
+	}
+	
 // 로그인 / 회원가입 페이지 / 비밀번호변경 페이지--------------------------------------------------------------------------------
 	
 	// 로그인 버튼(로그인 화면)
@@ -82,6 +99,12 @@ public class MainAppController {
 				signLabel.setText("암호를 입력하세요");
 				signImg.setVisible(true);
 				return;
+			}
+			
+			
+			if(chkbox.isSelected()) {
+				Preferences prefs = Preferences.userNodeForPackage(Controller.MainAppController.class);
+				prefs.put("temp", username);
 			}
 			
 			// DB에서 체크 후 유효성판단
@@ -116,6 +139,27 @@ public class MainAppController {
 				return;
 			}
 	}
+	
+	
+	// 아이디저장(로그인 화면)
+	@FXML protected void hSignInChkboxAction(ActionEvent event) {
+		String tempId = LoginId.getText();
+		
+		if(tempId.equals("")) {
+			return;
+		}
+		
+		Preferences prefs = Preferences.userNodeForPackage(Controller.MainAppController.class);
+		
+		if(chkbox.isSelected()) {
+			prefs.put("temp", tempId);
+		}
+		else if(!chkbox.isSelected()) {
+			prefs.remove("temp");
+		}
+	}
+	
+	
 	// 회원가입 버튼(로그인 화면)
 	@FXML protected void  hRegButtonAction(ActionEvent event) {
 		try {
@@ -213,7 +257,7 @@ public class MainAppController {
 		}
 		
 		MemberDAO dao = new MemberDAO();
-		MemberDTO dto = null;
+		//MemberDTO dto = null;
 		state = dao.isExist(username);
 		if(state == true) {
 			regLabel.setText("이미 존재하는 계정입니다");

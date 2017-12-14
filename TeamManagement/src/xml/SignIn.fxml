@@ -21,8 +21,8 @@
                <rotationAxis>
                   <Point3D />
                </rotationAxis></Button>
-            <CheckBox layoutX="133.0" layoutY="423.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="128.0" text="이름을 저장합니다" textFill="#f9f9f9" />
-            <CheckBox layoutX="133.0" layoutY="450.0" mnemonicParsing="false" text="자동 로그인" textFill="#f7f7f7" />
+            <CheckBox fx:id="chkbox" layoutX="133.0" layoutY="423.0" mnemonicParsing="false" onAction="#hSignInChkboxAction" prefHeight="28.0" prefWidth="128.0" text="이름을 저장합니다" textFill="#f9f9f9" />
+            <CheckBox disable="true" layoutX="133.0" layoutY="450.0" mnemonicParsing="false" text="자동 로그인" textFill="#f7f7f7" />
             <TextField fx:id="LoginId" layoutX="66.0" layoutY="340.0" minHeight="35.0" prefWidth="240.0" promptText="사용자 이름" />
             <Label layoutX="127.0" layoutY="321.0" prefHeight="13.0" prefWidth="145.0" />
             <ImageView fitHeight="18.0" fitWidth="15.0" layoutX="100.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" />
