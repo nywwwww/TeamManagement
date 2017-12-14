@@ -1,0 +1,427 @@
+
+/* 전체공통-------------------------------------------- */
+.button{
+	-fx-background-color: transparent;
+}
+.button:hover{
+	-fx-opacity : 0.8;
+}
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: transparent;
+   -fx-padding: 0 0 0 0;
+}
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: transparent;
+   -fx-padding: 0 0 0 0;
+}
+
+.table-view{
+    -fx-border-color:#E9E9E9;
+    -fx-border-width:1;
+    -fx-border-radius:2;
+    -fx-font-family: "NanumBarunGothic";
+}
+
+.table-view:focused{
+    -fx-background-color: transparent,-fx-box-border,-fx-control-inner-background;
+}
+
+.table-view .column-header {
+	visibility: hidden; -fx-padding: -1em;
+}
+
+.table-view .column-header-background{
+visibility: hidden; -fx-padding: -1em;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-color:transparent;
+}
+
+.table-view .filler{
+    -fx-opacity:0;
+}
+
+.table-view .table-row-cell {
+    -fx-cell-size: 29px;
+}
+.table-view .table-row-cell .text{
+    -fx-fill:#25292e;
+}
+.table-view .table-column{
+    -fx-border-color:transparent;
+    -fx-alignment:center_left;
+    -fx-padding: 0 0 0 15;
+}
+
+.table-view .table-column .label{
+    -fx-text-fill: #61718B;
+    -fx-font-weight:bold;
+    -fx-font-size:14px;
+    -fx-alignment:center_left;
+}
+
+.table-view .table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #EFF3F7;
+}
+
+.table-view .table-row-cell:selected {
+   -fx-background-color: #55BDA6;
+}
+
+.table-view .table-row-cell:selected .text {
+    -fx-fill: white;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:horizontal{
+    -fx-padding:-12;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+    visibility: hidden;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical > .thumb,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .thumb
+{
+    visibility: true;
+    -fx-background-color:#B3B9BF;
+    -fx-background-radius: 15;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+.scroll-pane > .virtual-flow > .scroll-bar > .increment-button,
+.scroll-pane > .virtual-flow > .scroll-bar > .decrement-button{
+	-fx-opacity: 0;
+} 
+
+.scroll-pane > .scroll-bar:vertical > .thumb,
+.scroll-pane > .scroll-bar:horizontal > .thumb
+{
+    visibility: true;
+    -fx-background-color:#B3B9BF;
+    -fx-background-radius: 15;
+}
+
+.scroll-pane > .scroll-bar:vertical,
+.scroll-pane > .scroll-bar:vertical > .track,
+.scroll-pane > .scroll-bar:vertical > .track-background,
+.scroll-pane > .scroll-bar:horizontal,
+.scroll-pane > .scroll-bar:horizontal > .track,
+.scroll-pane > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+    visibility: hidden;
+}
+
+.scroll-pane > .scroll-bar:vertical,
+.scroll-pane > .scroll-bar:horizontal{
+    -fx-padding:-2;
+}
+
+
+/* Sign In (로그인) 페이지-------------------------------------------- */
+
+.SignIn {
+	-fx-font-family: "NanumBarunGothic";
+    -fx-background-image: url("SI_bg.png");
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-size: 11;
+}
+
+.SignIn .button{
+	-fx-background-image: url("SI_BT.png");
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+
+.SignIn .button:pressed{
+	/*-fx-sbackground-image: url(".png"); */
+	
+}
+
+.SignIn .text-field{
+	-fx-background-image: url("SI_TFDisabled.png");
+	-fx-text-fill: #55BDA6;
+	-fx-font-size: 14;
+	-fx-highlight-fill: #f9f9f9;
+	-fx-alignment: center_left;
+}
+.SignIn .text-field:focused{
+	-fx-background-image: url("SI_TFEnabled.png");
+}
+
+
+
+
+/* Reistration (회원가입) / ChangePWD 페이지-------------------------------------------- */
+
+.Registration {
+	-fx-font-family: "NanumBarunGothic";
+    -fx-background-image: url("SI_bg.png");
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.Registration .Label{
+	-fx-font-family: "NanumSquareL";
+}
+
+.Registration .text-field{
+	-fx-background-image: url("Reg_TFDisabled.png");
+	-fx-font-size: 14;
+	-fx-highlight-fill: #f9f9f9;
+	-fx-text-fill: #4A4A4A;
+	-fx-background-color :transparent;
+}
+.Registration .text-field:focused{
+	-fx-background-image: url("Reg_TFEnabled.png");
+}
+
+.Registration .button{
+	-fx-background-image: url("Reg_BTEnabled.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+#Reg_backbutton{
+	-fx-background-image: url("Reg_BTDisabled.png");	
+}
+
+
+/* mainTemplate 메인 - 전체 템플릿 -------------------------------------------- */
+
+.sidebar{
+	-fx-background-image: url("ind_sidebarBG.png");
+}
+
+/* 상단바  */
+.topbar{
+	-fx-background-image: url("ind_topbarBG.png");
+}
+.topbar .label{
+	-fx-text-fill: #f9f9f9;
+	-fx-font-family: "NanumBarunGothic";
+}
+
+#TitleLabel{
+    -fx-font-size: 14;
+}
+
+
+/* 사이드메뉴 통합 CSS */
+.sideMenu:hover{
+	-fx-opacity : 0.6;
+}
+
+.subMenu{
+	-fx-background-image: url("SubMenuBg.png");
+	-fx-font-family: "NanumBarunGothic";
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-size: 11;
+}
+
+.subMenu .button{
+	-fx-background-image: url("SubMenu_BT.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+
+
+/* Settings 관리 페이지 -------------------------------------------- */
+/* 각각의 프레임 (페이지 안의 틀)에 해당하는 설정 */
+.FrameSubtitle .label{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #4A4A4A;
+}
+.FramePane{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-background-image: url("Set_Frame.png");
+}
+
+.FrameTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 14;
+}
+
+.FramePane .text-field{
+	-fx-background-image: url("Reg_TFDisabled.png");
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 12;
+	-fx-highlight-fill: #55BDA6;
+	-fx-text-fill: #4A4A4A;
+	-fx-background-color :transparent;
+}
+.FramePane .text-field:focused{
+	-fx-background-image: url("Reg_TFEnabled.png");
+}
+
+.FramePane .button{
+	-fx-background-image: url("Set_FrameBt.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;
+}
+
+#inviteAcceptButton{
+	-fx-background-image: url("Set_FrameListBt1.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
+#inviteRefuseButton{
+	-fx-background-image: url("Set_FrameListBt2.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
+
+#CompleteButton{
+	-fx-background-image: url("Set_FrameListBt1.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
+#setRegLabel{
+	-fx-text-fill: #FE2851;
+}
+
+#teamTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 52;
+}
+
+#objectiveTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 15;	
+}
+
+.setRealPane{
+	-fx-background-color: #ffffff;
+}
+
+.setRealPane .label{
+	-fx-font-family: "NanumBarunGothic";
+}
+
+
+/* Todo 업무 페이지 -------------------------------------------- */
+
+#DeleteButton{
+	-fx-background-image: url("Set_FrameListBt2.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
+#AllTableView .table-row-cell:selected {
+   -fx-background-color: #808080;
+}
+
+#MyTableView .table-row-cell:selected {
+   -fx-background-color: #808080;
+}
+
+#AllTablePane{
+	-fx-background-image: url("GreyBox.png");	
+	-fx-background-color: #808080;	
+}
+.TodoAllPane{
+	-fx-background-image: url("GreyBox.png");
+}
+.TableLabel{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 12s;	
+}
+
+#TodoDown{
+	-fx-background-image: url("Todo_DownBt.png");	
+	
+}
+#TodoUp{
+	-fx-background-image: url("Todo_UpBt.png");	
+	
+}
+
+/* Com 커뮤니케이션 페이지 -------------------------------------------- */
+
+.ContactLabel{
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 20;		
+}
+
+/* Team 팀 정보 페이지 -------------------------------------------- */
+
+.infoLabel{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 92;	
+}
+.infoLabel2{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 70;	
+}
+.DateYear{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 50;	
+}
+.DateDay{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-font-size: 25;	
+}
+.snsTable{
+	-fx-font-size:12;
+}
+
+
+.SubTodoTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-background-image: url("Set_FrameHead.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+.SubSnsTitle{	
+	-fx-font-family: "NanumBarunGothic";
+	-fx-background-image: url("Set_FrameHead.png");	
+	-fx-text-fill: #f9f9f9;
+	-fx-underline: false;	
+}
+
+.snsTable .table-row-cell:filled:selected { 
+  -fx-background: -fx-control-inner-background ;
+  -fx-background-color: -fx-table-cell-border-color, -fx-background ;
+  -fx-background-insets: 0, 0 0 1 0 ;
+  -fx-table-cell-border-color: derive(-fx-color, 5%);
+}
+.snsTable .table-row-cell:odd:filled:selected {
+  -fx-background: -fx-control-inner-background-alt ;
+}
+
+.snsTable .table-row-cell {
+    -fx-cell-size: 100px;
+}
+
+.snsTable .table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #FFFFFF;
+}
+
+.OSSTitle{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 18;	
+}
+.OSSContent{
+	-fx-font-family: "NanumBarunGothic";
+	-fx-text-fill: #f9f9f9;
+	-fx-font-size: 10;	
+}

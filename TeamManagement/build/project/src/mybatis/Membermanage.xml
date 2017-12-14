@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="org.mybatis.persistence.Membermanage">
+ 
+ 	<select id="User_selectUserName" parameterType="member" resultType="member">
+	 	SELECT UID,UserName, PWD, RealName, Question, Answer,LinkedTID
+	 	from User
+	 	WHERE UserName = #{UserName}
+ 	</select>
+ 	
+ 	 <select id="User_selectUID" parameterType="member" resultType="member">
+	 	SELECT UID,UserName, PWD, RealName, Question, Answer, LinkedTID
+	 	from User
+	 	WHERE UID = #{UID}
+ 	</select>
+ 
+	<insert id="User_insert" parameterType="member">
+ 		INSERT INTO User (UserName, PWD, RealName, Question, Answer)
+ 		VALUES (#{UserName}, #{PWD}, #{RealName}, #{Question}, #{Answer})
+ 	</insert>
+ 	
+ 	<update id="User_update" parameterType="member">
+ 		UPDATE User
+ 		SET PWD = #{PWD}
+ 		WHERE UserName = #{UserName}
+ 	</update>
+ 	
+ 	<select id="Team_selectTID" parameterType="member" resultType="member">
+	 	SELECT TID, TeamName, Auth, Leader, Objective
+	 	from Team
+	 	WHERE TID = #{TID}
+ 	</select>
+ 	
+ 	<select id="Team_selectLeader" parameterType="member" resultType="member">
+ 		SELECT TID, TeamName, Auth, Leader, Objective
+ 		FROM Team
+ 		WHERE Leader = #{Leader}
+ 	</select>
+ 	
+ 	 <select id="Team_selectTeamName" parameterType="member" resultType="member">
+ 		SELECT TID, TeamName, Auth, Leader, Objective
+ 		FROM Team
+ 		WHERE TeamName = #{TeamName}
+ 	</select>
+ 	
+ 	<insert id="Team_insert" parameterType="member">
+ 		INSERT INTO Team (TeamName, Auth, Leader, Objective)
+ 		VALUES (#{TeamName}, #{Auth}, #{Leader}, #{Objective})
+ 	</insert>
+ 	
+ 	<update id="User_LinkedTID_update" parameterType= "member">
+ 		UPDATE User
+ 		SET LinkedTID = #{LinkedTID}
+ 		WHERE UID = #{UID}
+ 	</update>
+ 	
+ 	<select id="Invite_selectToUID" parameterType="member" resultType="member">
+	 	SELECT IID, FromUID, ToUID, LinkedTID
+	 	FROM Invite
+	 	WHERE ToUID = #{ToUID}
+ 	</select>
+ 	
+ 	<select id="Invite_delete" parameterType="member" resultType="member">
+ 	 	DELETE FROM Invite
+ 	 	WHERE IID = #{IID}
+ 	</select>
+ 	
+ 	<insert id="Invite_insert" parameterType="member">
+ 		INSERT INTO Invite (FromUID, ToUID, LinkedTID)
+ 		VALUES (#{FromUID}, #{ToUID}, #{LinkedTID})
+ 	</insert>
+ 	
+ 	<insert id="Todo_insert" parameterType="member">
+ 		INSERT INTO Todo (Objective, AddUID, DoUID, IsEnd, LinkedTID)
+ 		VALUES (#{Objective}, #{AddUID}, #{DoUID}, #{IsEnd}, #{LinkedTID})
+ 	</insert>
+ 	 <select id="Todo_selectLinkedTID" parameterType="member" resultType="member">
+	 	SELECT DID, Objective, AddUID, DoUID, IsEnd, LinkedTID
+	 	FROM Todo
+	 	WHERE LinkedTID = #{LinkedTID}
+ 	</select>
+ 	
+  	<update id="Todo_update_DoUID" parameterType="member">
+ 		UPDATE Todo
+ 		SET DoUID = #{DoUID}
+ 		WHERE DID = #{DID}
+ 	</update>	
+ 	
+  	<update id="Todo_update_IsEnd" parameterType="member">
+ 		UPDATE Todo
+ 		SET IsEnd = #{IsEnd}
+ 		WHERE DID = #{DID}
+ 	</update>	
+ 	
+ 	 <select id="Todo_delete" parameterType="member" resultType="member">
+ 	 	DELETE FROM Todo
+ 	 	WHERE DID = #{DID}
+ 	</select>
+	<insert id="Contact_insert" parameterType="member">
+		INSERT INTO Contact (ConName, ConNumber, ConMail, LinkedTID)
+		VALUES (#{ConName}, #{ConNumber}, #{ConMail}, #{LinkedTID})
+	</insert>
+ 	
+ 	<select id="Contact_selectLinkedTID" parameterType="member" resultType="member">
+ 		SELECT ConName, ConNumber, ConMail
+ 		FROM Contact
+ 		WHERE LinkedTID = #{LinkedTID}
+ 	</select>
+ 	
+ 	<select id="Contact_searchName" parameterType="member" resultType="member">
+ 		SELECT ConName, ConNumber, ConMail
+ 		FROM Contact
+ 		WHERE ConName = #{ConName}
+ 	</select>
+ 	
+ 	<delete id="Contact_deleteAddr" parameterType="member">
+ 		DELETE from Contact
+ 		WHERE ConName = #{ConName}
+ 	</delete>
+ 	
+ 	<select id="Social_selectLinkedTID" parameterType="member" resultType="member">
+	 	SELECT SID, Contents, FromUID, LinkedTID
+	 	FROM Social
+	 	WHERE LinkedTID = #{LinkedTID}
+ 	</select>
+ 	<insert id="Social_insert" parameterType="member">
+		INSERT INTO Social (Contents, FromUID, LinkedTID)
+		VALUES (#{Contents}, #{FromUID}, #{LinkedTID})
+	</insert>
+	
+	<update id="Info_update" parameterType="member">
+ 		UPDATE User
+ 		SET RealName = #{RealName}, PWD = #{PWD}, Question = #{Question}, Answer = #{Answer}
+ 		WHERE UID = #{UID}
+ 	</update>
+ 	
+ 
+ </mapper>
